@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: Georgia, serif;
+	overflow: hidden;
+}
+
+#t-info {
+	background: url(images/transpBlack.png);
+	padding: 20px 0 20px 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	z-index: 6000;
+}
+
+#a-info {
+	background: url(transpBlue.png);
+	padding: 20px 0 20px 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	z-index: 6000;
+}
+.bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+}
+
+#more-info {
+	position: relative;
+	top: 0px;
+	display: none;
+}
+
+#tab {
+	width: 200px;
+	height: 36px;
+	background: url(images/tab-bg.png) no-repeat;
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	left: 50px;
+}
