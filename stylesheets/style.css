@@ -10,7 +10,7 @@ body {
 }
 
 #t-info {
-	background: url(images/transpBlack.png);
+	background: url(../images/transpBlack.png);
 	padding: 20px 0 20px 0;
 	position: relative;
 	top: 0px;
@@ -51,7 +51,7 @@ body {
 #tab {
 	width: 200px;
 	height: 36px;
-	background: url(images/tab-bg.png) no-repeat;
+	background: url(../images/tab-bg.png) no-repeat;
 	position: absolute;
 	z-index: 9999;
 	top: 0px;
