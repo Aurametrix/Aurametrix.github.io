@@ -31,15 +31,14 @@
 			<p>Status: <span id="status"></span></p>
 		</div>
 		<div id="setup">
-			<h1>Ondras Tetris</h1>
-			<p>It's different!</p>
+			<h1>Custom Tetris</h1>
+			<p>Change the way Tetris is played!</p>
 			<p>In a traditional Tetris setup, you play as a <em>defender</em>, 
-			trying to match tiles as long as possible. This version 
+			trying to position blocks correctly and remain alive as long as possible. This version 
 			allows you to customize <strong>both</strong> roles: defending (as a human or AI) and 
 			attacking (picking blocks as a human, AI or randomly). You can even change them during the gameplay.</p>
 			<p>All of these possibilities can be used in a networked multiplayer game as well, 
-			resulting in a total of <strong>12 games in 1 package!</strong></p>
-
+			resulting in a total of <strong>12 games in 1!</strong></p>
 			<button id="play">Play!</button>
 			<div id="attacker">
 				<span>Attacker: </span><select>
@@ -56,10 +55,11 @@
 					<option value="Network">Network</option>
 				</select>
 			</div>
-						<footer>Original version is <a href="http://ondras.github.io/custom-tetris/">here</a>. It was created by <a href="http://ondras.zarovi.cz/">Ondřej Žára</a> for the <a href="https://github.com/github/game-off-2013">GitHub Game Off 2013</a> contest</footer>
+			<p>This configuration is known as <strong id="description"></strong>.</p>
+			<p id="network"><button id="connect">Connect</button> https://<input type="text" id="server" size="8"/>.firebaseio.com/tetris/<input type="text" id="slug" size="5" /></p>
+			<footer>Original version is <a href="http://ondras.github.io/custom-tetris/">here</a>. It was created by <a href="http://ondras.zarovi.cz/">Ondřej Žára</a> for the <a href="https://github.com/github/game-off-2013">GitHub Game Off 2013</a> contest</footer>
 		</div>
 		<script>new Game.App();</script>
 		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 	</body>
 </html>
-

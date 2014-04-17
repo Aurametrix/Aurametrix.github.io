@@ -160,4 +160,3 @@ Game.Engine.prototype._stop = function() {
 	clearInterval(this._interval);
 	this._interval = null;
 }
-

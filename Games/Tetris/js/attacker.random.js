@@ -18,4 +18,3 @@ Game.Attacker.Random.prototype._poll = function() {
 	var type = Object.keys(Game.Piece.DEF).random();
 	this._engine.setNextType(type);
 }
-

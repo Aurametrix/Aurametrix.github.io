@@ -71,4 +71,3 @@ if (!("classList" in document.documentElement) && window.Element) {
 		});
 	})();
 }
-

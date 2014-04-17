@@ -230,5 +230,3 @@ Game.App.prototype._createBackground = function() {
 	piece.xy = new XY(1, 5);
 	piece.build(this._dom.setup);
 }
-
-
