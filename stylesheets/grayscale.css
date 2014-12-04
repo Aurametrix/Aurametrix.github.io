@@ -129,6 +129,7 @@ a:focus {
     color: #fff;
     background: url(../images/Biz_Solutions_Aurametrix.png) no-repeat bottom center scroll;
     background-color: #000;
+    background-position: center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
