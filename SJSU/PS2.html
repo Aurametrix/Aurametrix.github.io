@@ -1,0 +1,117 @@
+
+<!-- saved from url=(0044)http://home.comcast.net/~igabashvili/PS2.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Problem Set 2</title>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+1. Calculate the score of DNA alignment, use an affine gap penalty to score the 
+gaps, with -<b><font color="#0000FF">11</font></b> for opening the gap and -<b><font color="#0000FF">1</font></b> 
+for each next position in the gap. <br>
+Each match scores <font color="#008000">1 </font>
+<p> <font color="#008000"><b>GACTACATCCGTACGCACA </b></font><b>- - - <font color="#008000">GGTTCAGAC</font><br>
+  <font color="#008000">GACTACATCCGTACGCACA</font><font color="#FF0000">CAT</font><font color="#008000">GGTTCAGAC</font></b></p>
+<p>a. Score: <font color="#008000"><b><em> <u>28</u></em></b></font><u><em><b>-<font color="#0000FF">11</font>-(<font color="#FF0000">3</font>-1)*</b><font color="#0000FF"><b>1</b></font><b>=15</b></em></u><br>
+  b. How would the score change if a non-affine gap penalty was used instead? 
+  <font color="#008000"><b><em><u>28</u></em></b></font><u><em><b>-(<font color="#FF0000">3</font>)*</b><font color="#0000FF"><b>1</b></font><b>=25</b></em> 
+  </u></p>
+<p><br>
+  2. What mammals DCC protein aligns to? (accession: NP_005206, use blastp on 
+  Swissprot database, BLOSUM62 as scoring matrix). Name 3 or 4, What is best % 
+  identity, % similarity and length of alignment for each organism?<br>
+  a. <b><font color="#0000FF">Human, 99%, 99%, </font></b><font color="#0000FF"><b>1447, 
+  1445/1447</b></font><br>
+  b. <b><font color="#0000FF">Mouse</font></b><font color="#0000FF">, <b>96%, 
+  98%, 1447, 1396/1447, 1423/1447</b></font><br>
+  c. <b><font color="#0000FF">Rat</font></b><font color="#0000FF">, <b>51%, 69%</b></font>, 
+  <b> <font color="#0000FF">1428 (1377), 735/1428, 992/1428</font></b><br>
+  d.<font color="#0000FF"> <b>Cow, 22%, 41%, 784 (1018), 179/784, 322/784</b></font></p>
+<p><u><font color="#0000FF">In BLAST similarity refers to a positive matrix score.</font></u></p>
+<p>3. Analysis of a substance on the floor of a space station showed the presence 
+  of this sequence<br>
+  MKMLLLLCLGLTDVCVHAEEASSTGRNFNHEKINGELHTIILASDKREKIEDNGNFRLFLIQIFVLENSLVLKFHTVRDEECSELSMVADKTEKAGEYSVTYDGFNTFTIPKTDYDNFLIAHLIIEKDIETFQLMGLYGREPDLSSDIKERFAQLCEETGILRERIIDLSNANRCYSARE</p>
+<p>a. What species does it belong to? <b><font color="#0000FF"> Mouse</font></b><br>
+  b. What is this gene’s Entrez Symbol? <b><font color="#0000FF">Mup2 (acceptable: LOC100048884,Mup1,Mup6; P02762 is UniProt Accession)
+</font></b><br>
+  c. What chromosome is it located on? <b><font color="#0000FF">4</font></b><br>
+  d. What domain does this protein contain according to The ProfileScan Server 
+  (http://hits.isb-sib.ch/cgi-bin/PFSCAN)? <b><u><font color="#0000FF">UBIQUITIN</font></u></b></p>
+<p><font color="#0000FF">FT MYHIT 55 58 freq_pat:CK2_PHOSPHO_SITE [?]<br>
+  FT MYHIT 9 11 freq_pat:PKC_PHOSPHO_SITE [?]<br>
+  FT MYHIT 27 52 pat:UBIQUITIN_1 [!]<br>
+  FT MYHIT 1 76 prf:UBIQUITIN_2 [!]<br>
+  FT MYHIT 6 74 pfam_fs:ubiquitin [!]<br>
+  FT MYHIT 6 74 pfam_ls:ubiquitin [!]</font></p>
+<p><br>
+  4. Name a database for pattern-driven algorithm for promoter prediction <b><font color="#0000FF"><u><a href="http://www.gene-regulation.com/pub/databases.html">TRANSFAC</a>,</u></font></b><font color="#0000FF"><u> PROMO</u></font></p>
+<p>5. What is a likely function of a yeast protein that contains this fragment:<br>
+  MSSVAENIIQHATHNSTLHQ</p>
+<p>a. Likely function: <u><b><font color="#0000FF">Metabolism, demethylation, 
+  biosynthesis, electron transport</font></b></u><br>
+  b. Which genes are located upstream and downstream of the gene? <b><font color="#0000FF">BUD22 
+  and SOK2</font></b></p>
+<p><br>
+  6. What better describe Smith-Waterman and Needlman-Wunsch algorithms? <br>
+  a. Compares two sequences over their entire lengths: __<font color="#0000FF"><u>NW</u></font>______<br>
+  b. Searches for regions of local similarity: _______<u><font color="#0000FF">SW</font></u>____</p>
+<p>7. What is GenBank ID of this sequence? (hint: Marchandiomyces lignicola, Kingdom: 
+  fungi) <br>
+  &gt;gi|M_unknown_1<br>
+  CATGTCTAAGTTTAAGCAAATTTGTACTGTGAAACTGCGAATGGCTCATTAAATCAGTTATAGTTTATTT<br>
+  GATGGTACCTTGCTACATGGATAACTGTGGTAATTCTAGAGCTAATACATGCAATCAAGCCCCGACTTCT<br>
+  GGGAGGGGTGTATTTATTAGATAAAAAACCAACGCGGTTCGCCGCTCCCTTGGTGATTCATAATAACTTC<br>
+  TCGAATCGCATGGCCTTGCGCCGGCGATGCTTCATTCAAATATCTGCCCTATCAACTTTCGATGGTAGGA<br>
+  TAGAGGCCTACCATGGTTTCAACGGGTAACGGGGAATAAGGGTTCGATTCCGGAGAGGGAGCCTGAGAAA<br>
+  CGGCTACCACATCCAAGGAAGGCAGCAGGCGCGCAAATTACCCAATCCCGACACGGGGAGGTAGTGACAA<br>
+  TAAATAACAATATAGGGCTCTTTTGGGTCTTATAATTGGAATGAGTACAATTTAAATCCCTTAACGAGGA<br>
+  ACAATTGGAGGGCAAGTCTGGTGCCAGCAGCCGCGGTAATTCCAGCTCCAATAGCGTATATTAAAGTTGT<br>
+  TGCAGTTAAAAAGCCCGTAGTTGAACTTCAGGCCCGGCCGGGCGGTCCGCCTCACGGTGTGTACTGTCTG<br>
+  GCTGGGTCTTACCTCTTGGTGAGCCGGCATGCCCTTTACTGGGTGTGTCGGGGAACCAGGACTTTTACCT<br>
+  TGAGAAAATTAGAGTGTTCAAAGCAGGCCTACGCCCGAATACATTAGCATGGAATAATAGAATAGGACGT<br>
+  GCGGTTCTATTTTGTTGGTTTCTAGAGTCGCCGTAATGATTAATAGGGATAGTTGGGGGCATTCGTATTG<br>
+  CGTTGCTAGAGGTGAAATTCTTGGATTTACGCAAGACGAACTACTGCGAAAGCATTTGCCAAGGATGTTT<br>
+  TCATTAATCAAGGACGAAGGTTAGGGGATCGAAAACGATCAGATACCGTTGTAGTCTTAACAGTAAACTA<br>
+  TGCCGACTAGGGATCGGGCGATCTCACTTTTATGTGTCGCTCGGCACCTTACGAGAAATCAAAGTCTTTG<br>
+  GGTTCTGGGGGGAGTATGGTCGCAAGGCTGAAACTTAAAGGAATTGACGGAAGGGCACCACCAGGTGTGG<br>
+  AGCCTGCGGCTTAATTTGACTCAACACGGGGAAACTCACCAGGTCCAGACATGACTAGGATTGACAGATT<br>
+  GATAGCTCTTTCATGATTTTATGGGTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGTGATTTGTCTGGT<br>
+  TAATTCCGATAACGAACGAGACCTTAACCTGCTAAATAGCCAGGCCGGCTTTGGCTGGTCGCCGGCTTCT<br>
+  TAGAGGGACTGTCGGCGTCTAGCCGACGGAAGTTTGAGGCAATAACAGGTCTGTGATGCCCTTAGATGTT<br>
+  CTGGGCCGCACGCGCGCTACACTGACAGAGCCAGCGAGTTCATCTCCTTGACCGGAAGGTCTGGGTAATC<br>
+  TTGTGAAACTCTGTCGTGCTGGGGATAGAGCATTGCAATTATTGCTCTTCAACGAGGAATACCTAGTAGG<br>
+  CGTGAGTCATCAGCTCGCGTCGATTACGTCCCTGCCCTTTGTACACACCGCCCGTCGCTACTACCGATTG<br>
+  AATGGCTTAGTGAGGTCTTGGGATCGGCTTCGGGGAGCCGGCAACGGCACCCTGTCGCTGAGAACTTGAT<br>
+  CAAACTTGGTCATTTAGAGGA</p>
+<p>a. Genus/Species = Marchandiomyces lignicola<br>
+  b. Kingdom = Fungi<br>
+  c. GenBank Accession: <b><font color="#0000FF">DQ915465, GenBank identifier, GI: 118429481</font></b></p>
+<font color="#0000FF">
+BLASTN on Nucleotide Collection<br>
+DQ915465<br>
+Marchandiomyces lignicola strain JL258-03 18S small subunit ribosomal RNA gene, partial sequence
+gi|118429481|gb|DQ915465.1|[118429481] 
+
+</font>
+<p><br>
+  8. Below shown is output of Dotup program. What can you guess from looking at 
+  it?<br>
+</p>
+<p>The Sequence has <br>
+  a. 5 short tandem repeats<br>
+  b. 5 exons    <b><u><font color="#0000FF"> &lt;-- correct answer</font></u></b><br>
+  c. 5 regions of low complexity<br>
+  d. Alignment of two very dissimilar sequences is shown</p>
+<p><img src="./PS2_files/ProblemSet2_9.gif" width="575" height="221"></p>
+<p><br>
+  9. GeneMark is another program that finds genes in genomes and predicts their 
+  structure http://exon.gatech.edu/GeneMark/<br>
+  Use sequence of human M12523<br>
+  a. How many exons are predicted? <u><b><font color="#0000FF">13</font></b></u><br>
+  b. What is sensitivity of GenMark based on this result? <u><b><font color="#0000FF">correctly predicted/actual exons =13/15</font></b></u><br>
+  c. What is specificity of GenMark based on this result? <u><b><font color="#0000FF">correctly predicted/all predicted exons =13/13</font></b></u></p>
+<p>10. GeneMark algorithm uses HMMs. Is it a "lookup" or an "ab 
+  initio" algorithm?: <font color="#0000FF"><b><u>"ab initio"</u></b></font></p>
+
+
+</body></html>
