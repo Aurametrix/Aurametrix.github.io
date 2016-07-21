@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="helloApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Hello</title>
+<link rel="stylesheet"
+	href="../stylesheets/bootstrap.min.css">
+<script
+	src="../javascripts/jquery.min.js"></script>
+<script
+	src="../javascripts/bootstrap.min.js"></script>
+<script
+	src="../javascripts/angular.min.js"></script>
+
+<script>
+	var helloApp = angular.module("helloApp", []);
+	helloApp.controller("HelloCtrl", function($scope) {
+		$scope.name = "Student";
+	});
+</script>
+</head>
+<body ng-controller="HelloCtrl">
+	<header class="navbar navbar-static-top" id="top" role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse"
+				data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>		
+	</div>
+	</header>
+	<div class="container">
+		<div class="page-header" style="margin: 0">
+			<h1>Statistics</h1>
+			<p>&nbsp;</p>
+			<p>1. Introduction</p>
+			<p> 2. Exploratory data analysis</p>
+		      <ul style="list-style-type:circle">
+              <li>Distributions</li>
+              <li>Relationships</li>
+          </ul>
+
+			<p> 3. Data</p>
+					      <ul style="list-style-type:circle">
+              <li>Sampling</li>
+              <li>Study design</li>
+                </ul>
+			
+			
+			
+			<p> 4. Probability</p>
+			<p> 5. Inference</p>
+						<p> END OF INTRODUCTORY COURSE</p>
+			<p>Statistical Learning and Data Mining</p>
+					      <ul style="list-style-type:circle">
+              <li>Supervised Learning</li>
+              					      <ul style="list-style-type:square">
+                              <li>Least squares and nearest neighbors</li>
+                              <li>Statistical decisions</li>
+                                                            <li>Statistical models</li>
+                                                            <li>From Regression to Classification and Kernel Smoothing</li>
+                                                            <li>Neural Networks</li>
+                              </ul>
+              <li>Unsupervised learning</li>
+                            					      <ul style="list-style-type:square">
+                              <li>Association rules</li>
+                              <li>Cluster analysis</li>
+                              <li>Principal components</li>
+                              <li>Nonlinear dimension reduction</li>
+                              </ul>
+                </ul>
+
+
+			<p>&nbsp;</p>
+		</div>
+		<div style="padding-top: 15px">Type your name in the text field
+			below</div>
+		<div style="padding-top: 30px">
+			<div style="padding: 0px 0px 20px 30px">
+				<h4>Hello {{name}}! How are you doing today?</h4>
+			<form class="form-horizontal" role="form" method="post" action="#">
+				<div class="form-group">
+					<label class="col-md-1 control-label">Name</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="firstname"
+							ng-model="name">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">&nbsp;</h3>
+			</div>
+			<div class="panel-body"></div>
+		</div>		
+	</div>
+</body>
+</html>	
