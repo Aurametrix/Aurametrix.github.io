@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - New Age v4.0.0-alpha (http://startbootstrap.com/template-overviews/new-age)
+ * Start Bootstrap - New Age v4.0.0-beta (https://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
@@ -118,11 +118,9 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  /* #7b4397 = purple; #dc2430 = red  *; final: #330867/
-/* 022 Morpheus DenGet #30cfd0 ? #330867*/
-  background: url("../img/bg-pattern.png"), #2476dc;  /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #2476dc, #3624dc); /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #2476dc, #3624dc); } /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430); }
   header.masthead .header-content {
     max-width: 500px;
     margin-bottom: 100px;
@@ -198,9 +196,8 @@ section.features .feature-item {
     font-size: 80px;
     display: block;
     margin-bottom: 15px;
-     /* #7b4397 = purple; #dc2430 = red  */
-    background: -webkit-linear-gradient(to left, #2476dc, #3624dc);
-    background: linear-gradient(to left, #2476dc, #3624dc);
+    background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+    background: linear-gradient(to left, #7b4397, #dc2430);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
@@ -279,7 +276,6 @@ footer {
       footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
         text-decoration: none; }
 
-/* yellow */
 .bg-primary {
   background: #fdcc52;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
