@@ -1,5 +1,0 @@
-#7b4397 -> 2476dc  #2476dc
-RIGHT color
-
-LEFT
-dc2430 -> 330867
