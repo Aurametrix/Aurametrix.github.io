@@ -34,6 +34,10 @@
   width: 940px;
 }
 
+.grid .grid-5 {
+  width: 110px;
+}
+
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */
 
 .clearfix {
