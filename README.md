@@ -25,6 +25,8 @@ https://artillery.io/
 https://www.joedog.org/siege-home/
 
 
+
+
 #### Loader
 loader.io
 
@@ -44,3 +46,4 @@ loader.io
 + [W3C mobileOK Checker](https://validator.w3.org/mobile)
 + [W3C Link Checker](https://validator.w3.org/checklink)
 + [W3C Feed Validation Service](https://validator.w3.org/)
++ [Portable Text, a JSON based rich text specification for content editing platforms](http://www.portabletext.org)
