@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+  <head> 
+  <meta http-equiv="refresh" content="0; URL=https://aurametrix.com/" />
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+ 
+	
+    <title>Redirect</title>
+
+ # Redirect all incoming http requests to the same site and URI on https, using nginx
+server {
+  listen 80;
+
+  return 301 https://$host$request_uri;
+}
+
+# Redirect for aurametrix.com from http to https, using Apache
+<VirtualHost *:80>
+  ServerName aurametrix.com
+  Redirect permanent / https://aurametrix.com/
+</VirtualHost>
+
+  </body>
+
+</html>
