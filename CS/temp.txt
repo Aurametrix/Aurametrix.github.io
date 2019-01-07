@@ -1,0 +1,3 @@
+Settings > System > Storage and click “Free Up Space Now” under Storage Sense
+Settings > Apps > Startup.
+Clear browser cache for each browser
