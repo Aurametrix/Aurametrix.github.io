@@ -1,0 +1,53 @@
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"MEBO Biolab data",
+  "description":"Raw Data from Clinical Trial NCT02692495",
+  "url":"https://dx.doi.org/10.17632/8bk6h6bmkr.1",
+  "sameAs":"https://data.mendeley.com/datasets/8bk6h6bmkr/1",
+  "identifier": ["doi:10.17632/8bk6h6bmkr.1", "ark:/"],
+  "keywords":[
+     "HEALTH CHARITIES > MEBO RESEARCH",
+     "PRINCIPAL INVESTIGATOR > IRENE GABASHVILI",
+     "DIAGNOSTIC TESTING > METABOLOME",
+     "SYMPTOM > BODY ODOR",
+     "SYMPTOM > PATM"
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://aurametrix.com/",
+     "name":"Aurametrix",
+"contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "customer service",
+        "telephone":"+1-800-0000-00",
+        "email":"support@aurametrix.com"
+     }
+  },
+   "includedInDataCatalog":{
+     "@type":"DataCatalog",
+     "name":""
+  },
+  "distribution":[
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"CSV",
+        "contentUrl":""
+     },
+     {
+        "@type":"DataDownload",
+        "encodingFormat":"XML",
+        "contentUrl":""
+     }
+  ],
+  "temporalCoverage":"",
+  "spatialCoverage":{
+     "@type":"Place",
+     "geo":{
+        "@type":"GeoShape",
+        "box":"18.0 -65.0 72.0 172.0"
+     }
+  }
+}
+</script>
