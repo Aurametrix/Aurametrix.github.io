@@ -48,3 +48,7 @@ loader.io
 + [W3C Feed Validation Service](https://validator.w3.org/)
 + [Portable Text, a JSON based rich text specification for content editing platforms](http://www.portabletext.org)
 + [library for building web applications in the Kotlin](http://kweb.io/)
+
++ [CSS animations](https://blog.prototypr.io/this-aint-disney-a-practical-guide-to-css-transitions-and-animations-a8b87e7c5531)
+
+     @media (prefers-reduced-motion: reduce) {}
