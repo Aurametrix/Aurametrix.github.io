@@ -71,14 +71,20 @@
 <div dir="ltr" style="text-align: left;" trbidi="on">
 Background and clinical characteristics measured <a href="https://aurametrix.com/blog/baseline.html">at baseline</a> are comparable in the groups of our study. But this doesn't eliminate the need to investigate the impact of confounding. We've already analyzed the effects of age, What about gender as a potential confounder?<br />
 <br />
-Being female is a risk factor for pain (because of hormonal and nervous system differences). Odor awareness is linked to female-stereotyped activities in childhood and adulthood. A sniff may give away a person’s gender. Therefore gender could be a&nbsp;<span style="background-color: white; font-family: &quot;times new roman&quot; , &quot;stixgeneral&quot; , serif; font-size: 15.9991px;">risk factor for the outcome of interest in our study. Besides</span>, since women may report their symptoms differently, it could affect the quality of life score. Are there related differences important for our study?<br />
+Being female is a risk factor for pain (because of hormonal and nervous system differences). Odor awareness is linked to female-stereotyped activities in childhood and adulthood. A sniff may give away a person’s gender. Therefore gender could be a&nbsp;<span style="background-color: white; font-family: &quot;times new roman&quot; , &quot;stixgeneral&quot; , serif; font-size: 15.9991px;">risk factor for the outcome of interest in our study. Besides</span>, since 
+women may report their symptoms differently than men, it could affect the quality of life score. Are there related differences important for our study?<br />
 <br />
 Microbiomes of males and females are similar in childhood but start to differ significantly after puberty. The figure on the right shows gender separation of microbiomes in mice:<br />
-<a href="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" imageanchor="1" style="background-color: transparent; border: 0px; clear: right; color: #0084b4; float: right; font-family: &quot;helvetica neue&quot;, helvetica, arial, sans-serif; font-size: 13px; font-stretch: inherit; line-height: inherit; margin-bottom: 1em; margin-left: 1em; margin-top: 0px; padding: 0px; vertical-align: baseline;"><img border="0" data-original-height="398" data-original-width="800" height="158" src="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;" width="320" /></a><a href="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" imageanchor="1" style="border: 0px; clear: right; color: #0084b4; float: right; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1em; margin-left: 1em; margin-top: 0px; padding: 0px; vertical-align: baseline;"><span style="background-color: white; color: #666666; font-family: &quot;times new roman&quot; , &quot;stixgeneral&quot; , serif; font-size: 15.9991px;"></span></a><span style="background-color: white; color: #666666; font-family: &quot;times new roman&quot; , &quot;stixgeneral&quot; , serif; font-size: 15.9991px;">&nbsp;</span>very similar at 3 weeks (red and turquoise, respectively), noticeably different at 6 weeks (green and pink,&nbsp; when sexual maturity is reached) and very different at 14 weeks (black and blue).<br />
+
+<a href="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" imageanchor="1" style="background-color: transparent; border: 0px; clear: right; color: #0084b4; float: right; font-family: &quot;helvetica neue&quot;, helvetica, arial, sans-serif; font-size: 13px; font-stretch: inherit; line-height: inherit; margin-bottom: 1em; margin-left: 1em; margin-top: 0px; padding: 0px; vertical-align: baseline;"><img border="0" data-original-height="398" data-original-width="800" height="158" src="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;" width="320" /></a><a href="https://aurametrix.com/images/Studies/Gender-separated-microbiomes-mice.jpg" imageanchor="1" style="border: 0px; clear: right; color: #0084b4; float: right; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin-bottom: 1em; margin-left: 1em; margin-top: 0px; padding: 0px; vertical-align: baseline;"><span style="background-color: white; color: #666666; font-family: &quot;times new roman&quot; , &quot;stixgeneral&quot; , serif; font-size: 15.9991px;"></span></a>
+
+very similar at 3 weeks (red and turquoise, respectively), noticeably different at 6 weeks (green and pink,&nbsp; when sexual maturity is reached) and very different at 14 weeks (black and blue).<br />
 <br />
 In our study, microbiomes could be also easily differentiated by gender. The figure below shows ROC curve
 
  - a standard way of describing the accuracy of a diagnostic test.&nbsp; In this case, it shows that our classifier (Random Forest) does a great job of identifying males vs females by their microbiomes. 
+ Area under curve (AUC)is 89%. It's still sufficiently high, 86% for Logistic regression. 
+ 
 
 
 
@@ -90,8 +96,9 @@ vertical-align: baseline;">
 <img border="0" data-original-height="398" data-original-width="800" height="158" 
 src="../images/Studies/ROC_Gender_RF.png" style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;" width="320" /></a><br />
 
-Other notable differences between males and females were severity of symptoms reported -<br />
-Most frequent description of symptoms for males was "most of the time", while for females it was "sometime" or "all the time". Also, men estimated distance at which their odor or PATM "aura" was noticed slightly higher than women.<br />
+Other notable differences between males and females were severity of symptoms reported (see boxplot below) -<br />
+Most frequent description of symptoms for males was "most of the time", while for females it was "sometime" 
+followed by "all the time". Also, men estimated distance at which their odor or PATM "aura" was noticed slightly higher than women.<br />
 <a href="../images/Studies/MEBO-gender.png" imageanchor="1" style="border: 0px; clear: right; color: #0084b4; float: right; font-family: &quot;helvetica neue&quot;, helvetica, arial, sans-serif; font-size: 13px; font-stretch: inherit; line-height: inherit; margin-bottom: 1em; margin-left: 1em; margin-top: 0px; padding: 0px; vertical-align: baseline;">
 <img border="0" data-original-height="398" data-original-width="800" height="158" 
 src="../images/Studies/MEBO-gender.png" style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;" width="320" /></a>Many studies suggest that males are better than females at estimating distances in space and orientation and "dead reckoning", so it might be difficult to draw conclusions from this observation.<br />
@@ -99,7 +106,7 @@ There was no difference in answers to questions: "When you woke up today, how we
 <br />
 Significant differences were in social isolation - men were more likely to avoid going out because of MEBO/PATM.&nbsp; Generally, men feel existentially more isolated than women. they are more likely to experience social isolation having few­er and shallower relationships. This gender gap translates to disparities in mental health and physical health outcomes like increased stroke risk or suicidality.<br />
 <br />
-Other, also expected, significant differences were in abdominal symptoms such as bloating. It is known that changes in progesterone and estrogen levels cause the body to retain more water and salt.<br />
+Other, also expected, significant differences were in abdominal symptoms such as bloating. It is well known that changes in progesterone and estrogen levels cause the body to retain more water and salt.<br />
 <br />
 We'll account for these differences when putting together everything we have learned.<br />
 <br />
