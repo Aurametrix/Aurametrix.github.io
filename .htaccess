@@ -1,4 +1,12 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^aurametrix\.com [NC]
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://aurametrix.com/$1 [R,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !local [NC]
+RewriteRule ^(.*)$ https://aurametrix.com/$1 [R=301,L,NE]
+#
+#RewriteCond %{HTTP_HOST} ^www\.aurametrix\.com$
+#RewriteRule ^/?$ "https\:\/\/aurametrix\.com\/" [R=301,L]
+#
+#RewriteCond %{HTTP_HOST} ^aurametrix\.com [NC]
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://aurametrix.com/$1 [R,L]
+Redirect 301 /spring2017.html /https://aurametrix.weebly.com/spring2017.html
