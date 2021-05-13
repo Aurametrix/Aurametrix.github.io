@@ -1,6 +1,56 @@
 https://clinicaltrials.gov/ct2/show/NCT04832932
 
 https://www.who.int/who-documents-detail/draft-landscape-of-covid-19-candidate-vaccines
+
+Over 4K COVID-19 Studies from the World Health Organization Database:
 https://clinicaltrials.gov/ct2/who_table
 
+Coronavirus varinats in US:
+https://www.cdc.gov/coronavirus/2019-ncov/transmission/variant-cases.html
+
+
 Vitamin D: https://clinicaltrials.gov/ct2/results?term=vitamin+d&cond=COVID-19
+
+Serious adverse reactions from vaccines and Spike Protein:
+https://www.ahajournals.org/doi/full/10.1161/CIRCRESAHA.121.318902  - SARS-CoV-2 Spike Protein Impairs Endothelial Function via Downregulation of ACE 2
+Spike protein can cause damage to lungs:
+https://www.contagionlive.com/view/spike-protein-of-sars-cov-2-virus-alone-can-cause-damage-to-lungs
+
+In the Moderna, Pfizer/BioNTech, J&J, and Novavax vaccines, the Spike protein has some proline mutations introduced to try to hold it in its “prefusion” conformation, rather than the shape it adopts when it binds to ACE2. So that should cut down even more on the ability of the Spike protein produced by these vaccines to bind and produce the effects noted in the recent papers
+
+https://blogs.sciencemag.org/pipeline/archives/2021/05/04/spike-protein-behavior
+
+Allergy to COVID vaccines - a current update:
+https://www.sciencedirect.com/science/article/pii/S1323893021000459?via%3Dihub
+
+The Horror stories:
+https://www.reddit.com/r/unvaccinated/comments/n5xem2/35_year_old_woman_dies_of_brain_hemmorhage_11/
+The family of a Michigan woman says she died as the result of complications 11 days after receiving the Johnson & Johnson (J&J) COVID vaccine.
+
+Anne VanGeest, 35, died April 19 at Mercy Health Saint Mary’s hospital in Grand Rapids from an acute subarachnoid brain hemorrhage
+
+On April 30 Children’s Health Defense queried the VAERS data for a series of adverse events associated with the formation of clotting disorders and other related conditions. VAERS yielded a total of 1,845 reports for all three vaccines from Dec. 14, 2020, through April 23.
+
+Of the 1,845 cases reported, there were 655 reports attributed to Pfizer, 577 reports to Moderna and 608 reports to J&J. However, U.S. health officials only acknowledged 15 blood clot cases associated with the J&J vaccine at the April 16 meeting. A query in VAERS for subarachnoid brain hemorrhage yielded 31 cases, eight of which were associated with J&J’s COVID vaccine.
+
+Source: https://childrenshealthdefense.org/defender/35-year-old-woman-dies-brain-hemorrhage-johnson-johnson-vaccine/?utm_source=telegram&utm_medium=defender
+
+
+
+ASTRAZENECA
+Not only younger women - 
+a 59 year old man died in the UK: https://www.bbc.com/news/uk-56675665
+a 44-year-old man with multiple clots in his liver, spleen and in his gut treated in Australia: https://www.abc.net.au/news/2021-04-02/man-who-received-astrazeneca-coronavirus-vaccine-has-blood-clots/100046540
+a 58 year ikd firnmer taekwondo champion losing his leg weeks after receiving AstraZeneca Covid-19 vaccination: https://www.stamfordmercury.co.uk/news/man-lost-leg-weeks-after-covid-vaccination-9198171/
+
+Pfizer
+Nashville woman partially paralyzed after rare COVID vaccine reaction walks again
+https://www.wkrn.com/news/nashville-woman-partially-paralyzed-after-rare-reaction-to-covid-vaccine-walks-again/
+
+Clinical Trials
+BNT162b2
+https://www.nejm.org/doi/full/10.1056/nejmoa2034577
+https://www.clinicaltrials.gov/ct2/show/NCT04754594?term=NCT04754594&
+The Spike protein produced by vaccination is not released in a way that it gets to encounter the ACE2 proteins on the surface of other human cells at all: it’s sitting on the surface of muscle and lymphatic cells up in your shoulder, not wandering through your lungs causing trouble
+Some of the vaccine dose is going to make it into the bloodstream, mostly ending in the liver.
+https://www.ema.europa.eu/en/documents/assessment-report/comirnaty-epar-public-assessment-report_en.pdf
