@@ -2,6 +2,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} !local [NC]
 RewriteRule ^(.*)$ https://aurametrix.com/$1 [R=301,L,NE]
+
+<IfModule mod_speling.c>
+CheckSpelling on
+</IfModule>
+
 #
 #RewriteCond %{HTTP_HOST} ^www\.aurametrix\.com$
 #RewriteRule ^/?$ "https\:\/\/aurametrix\.com\/" [R=301,L]
