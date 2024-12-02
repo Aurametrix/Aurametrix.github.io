@@ -1,0 +1,19 @@
+#parking-lot {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(10, 50px); /* 10 columns */
+  grid-template-rows: repeat(5, 50px); /* 5 rows */
+}
+
+.parking-spot {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray; /* Empty spot */
+  border: 1px solid black;
+}
+
+.occupied-spot {
+  background-color: red; /* Occupied spot */
+}

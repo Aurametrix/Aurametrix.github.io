@@ -1,0 +1,18 @@
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.parking-spot {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #666;
+    text-align: center;
+}
+
+.parking-spot.occupied {
+    background-color: #f00;
+    color: #fff;
+}
