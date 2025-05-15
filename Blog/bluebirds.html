@@ -29,32 +29,66 @@
       text-align: center;
       padding: 20px 0;
     }
-    .header h1 {
+    .header h1, .header h2 {
       font-size: 2em;
+      margin: 0.25em 0;
+    }
+    .header ul {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 1em;
+    }
+    .header li {
+      display: inline;
+      margin-right: 15px;
     }
     .blog-post {
       background-color: #fff;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     }
-    .blog-post img {
-      width: 100%;
-      max-width: 320px;
+    /* Responsive flex for title & image row */
+    .blog-post-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .blog-post-row-content {
+      flex: 1 1 240px;
+      min-width: 180px;
+    }
+    .blog-post-row img {
+      max-width: 160px;
+      width: 28vw;
       height: auto;
-      display: block;
-      margin: 10px auto;
+      border-radius: 8px;
+      flex-shrink: 0;
     }
-    .blog-post p {
-      margin-bottom: 15px;
+    /* Image grid responsive */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
-    .blog-post a {
-      color: #3498db;
-      text-decoration: none;
+    .image-item {
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 6px rgba(0,0,0,0.04);
     }
-    .blog-post a:hover {
-      text-decoration: underline;
+    .image-item img {
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
     .footer {
       text-align: center;
@@ -63,63 +97,59 @@
       color: #fff;
     }
     @media (max-width: 768px) {
-      .blog-post img {
-        max-width: 100%;
-      }
-      .header h1 {
-        font-size: 1.5em;
+      .header h1, .header h2 {
+        font-size: 1.4em;
       }
       .blog-post {
-        padding: 15px;
+        padding: 14px;
       }
+      .blog-post-row img {
+        max-width: 100px;
+        width: 38vw;
+      }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 7px; }
+      .blog-post-row { gap: 8px; }
+      .blog-post-row img { max-width: 75px; }
     }
   </style>
 </head>
 <body>
-
 <div class="container">
   <div class="header">
     <h2>Bird Stories</h2>
     <ul>
-      <li><a href="../blog/finches.html">Finches</a></li>
+      <li><a href="../Blog/finches.html">Finches</a></li>
       <li><a href="../Blog/titmice2020.html">Titmice</a></li>
       <li><a href="../Blog/bluebirds.html">Bluebirds</a></li>
-      <li>Swallows: <a href="../blog/swallows.html"> 2020</a>; <a href="../Blog/swallows2025.html"> 2025</a></li>
+      <li>Swallows: <a href="../blog/swallows.html">2020</a>; <a href="../Blog/swallows2025.html">2025</a></li>
     </ul>
-
-<h2><a href="../blog.html">Other Stories</a></h2>
+    <h2><a href="../blog.html">Other Stories</a></h2>
   </div>
 
-
-
-<div class="blog-post" style="position: relative; padding-top: 20px; padding-bottom: 20px;">
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-    <div>
-      <h2>Bluebirds</h2>
-      <p>Chronicles from spring 2021</p>
+  <div class="blog-post">
+    <div class="blog-post-row">
+      <div class="blog-post-row-content">
+        <h2>Bluebirds</h2>
+        <p>Chronicles from spring 2021</p>
+        <!-- Add your text here. It will wrap neatly next to the image and stack under it on mobile. -->
+      </div>
+      <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="Bluebird">
     </div>
-    <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="titmouse" 
-	style="width: 75px; height: auto; margin-left: 15px;">
   </div>
 
-</div>
-
- <div dir="ltr" style="text-align: left;" trbidi="on">
- 
-
-&nbsp;</p>
-
-<p></p>
-<br>
- <div class="image-grid">
-  <div class="image-item">
-    <img src="" alt="..">
-    <p>..</p>
-  </div>
-  <div class="image-item">
-    <img src="" alt="">
-    <p>..</p>
+  <div class="image-grid">
+    <div class="image-item">
+      <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="Bluebird in the box">
+      <p>Bluebird peeking out of the nest box, May 14</p>
+    </div>
+    <div class="image-item">
+      <img src="../images/Stories/2000/BlueBirds/ClosertoFledging.jpg" alt="getting ready to fledge">
+      <p>Getting ready to fledge</p>
+    </div>
+    <!-- to be continued -->
   </div>
 </div>
-
-</div>
+</body>
+</html>
