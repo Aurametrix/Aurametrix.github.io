@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kahite Writers • Local Voices from Our Community</title>
+  <meta name="description" content="Meet the writers of Kahite—a master-planned community—celebrating stories, memoir, humor, and magic rooted in our own backyard." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Kahite Writers • Local Voices from Our Community" />
+  <meta property="og:description" content="Discover books, blogs, and works-in-progress by Kahite authors." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #0f172a;          /* slate-900 */
+      --panel: #111827;       /* gray-900 */
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #94a3b8;       /* slate-400 */
+      --accent: #a7f3d0;      /* mint */
+      --accent-2: #fcd34d;    /* warm gold */
+      --chip: rgba(167, 243, 208, .12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, #1f2937 0%, var(--bg) 50%), var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+    header.hero {
+      padding: 56px 0 24px;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: .5px;
+    }
+    .hero p {
+      margin: 0 auto;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.2vw, 1.125rem);
+    }
+
+    .toolbar {
+      display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+      margin: 28px auto 8px;
+    }
+    .chip {
+      padding: 8px 12px; border-radius: 999px; background: var(--chip);
+      color: var(--accent); border: 1px solid rgba(167,243,208,.35);
+      font-size: .9rem; cursor: default; user-select: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    @media (min-width: 760px) {
+      .card { grid-column: span 6; }
+    }
+    @media (min-width: 1020px) {
+      .card { grid-column: span 4; }
+    }
+
+    .avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: radial-gradient(circle at 30% 30%, rgba(252,211,77,.35), rgba(167,243,208,.25));
+      border: 1px solid rgba(255,255,255,.2);
+      color: #111; font-weight: 800; font-size: 1.4rem;
+    }
+
+    .meta h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .tagline {
+      margin: 4px 0 10px; color: var(--muted); font-size: .98rem;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
+    .badge {
+      background: rgba(252,211,77,.14);
+      color: var(--accent-2);
+      border: 1px solid rgba(252,211,77,.35);
+      border-radius: 8px; padding: 4px 8px; font-size: .8rem;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .links a {
+      text-decoration: none; color: #111; font-weight: 600;
+      background: var(--accent);
+      padding: 8px 12px; border-radius: 10px;
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .links a:hover { transform: translateY(-1px); filter: saturate(110%); }
+
+    .body {
+      margin-top: 8px; color: var(--text); font-size: .98rem;
+    }
+
+    footer {
+      margin: 48px 0 24px; text-align: center; color: var(--muted); font-size: .95rem;
+    }
+    footer a { color: var(--accent); }
+
+    /* Accessibility: focus styles */
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px;
+    }
+  </style>
+
+  <!-- Simple schema.org metadata for each author -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Kahite Writers",
+    "itemListElement": [
+      {
+        "@type": "Person",
+        "name": "Brian Mulliner",
+        "jobTitle": "Author",
+        "description": "Middle-grade fantasy adventure with nature-forward magic; folklore-rich tales from a child's imaginative POV. Also writes historical fiction.",
+        "url": "https://example.com/brian-mulliner",
+        "knowsAbout": ["Middle-grade fantasy","Folklore","Nature writing","Historical fiction"]
+      },
+      {
+        "@type": "Person",
+        "name": "Ralph Mobley",
+        "jobTitle": "Writer & Blogger",
+        "description": "Warm, humorous personal storytelling about dogs and everyday life; currently outlining a memoir.",
+        "url": "https://example.com/ralph-mobley",
+        "knowsAbout": ["Humor writing","Pet stories","Blogs","Memoir"]
+      },
+      {
+        "@type": "Person",
+        "name": "Nelson Ledbetter",
+        "jobTitle": "Author (in progress)",
+        "description": "Autobiographical project-in-progress: 'Where Has Nelson Been?'—a candid look at travels, work, and turning points.",
+        "url": "https://example.com/nelson-ledbetter",
+        "knowsAbout": ["Autobiography","Travel writing","Life stories"]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <h1>✍️ Kahite Writers</h1>
+      <p>Local voices from the master-planned community of <strong>Kahite</strong>—sharing fantasy, folklore, humor, memoir, and lived experience. Explore their work, follow new releases, and celebrate storytelling close to home.</p>
+      <div class="toolbar" aria-label="Popular topics">
+        <span class="chip">Fantasy</span>
+        <span class="chip">Folklore &amp; Nature</span>
+        <span class="chip">Humor &amp; Pets</span>
+        <span class="chip">Blogs &amp; Essays</span>
+        <span class="chip">Memoir</span>
+        <span class="chip">Autobiography</span>
+      </div>
+    </header>
+
+    <main class="grid" role="list">
+      <!-- Brian Mulliner -->
+      <article class="card" role="listitem" aria-labelledby="brian-name">
+        <div class="avatar" aria-hidden="true">BM</div>
+        <div class="meta">
+          <h2 id="brian-name">Brian Mulliner</h2>
+          <p class="tagline">Folklore-rich fantasy from a child’s magical point of view—imagination with heart.</p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Fantasy</span>
+            <span class="badge">Nature &amp; Magic</span>
+            <span class="badge">Historical Fiction</span>
+          </div>
+
+          <p class="body">
+            Brian’s stories blend woodland lore, wonder, and friendship, told through the eyes of a child narrator.
+            Expect brisk adventures, creature folklore, and quiet moments under starlit trees. His second book
+            broadens his range into <em>historical fiction</em>, bringing the same empathy and sense of place to a different era.
+          </p>
+
+          <nav class="links" aria-label="Brian's works and links">
+            <a href="https://www.amazon.com/Enchanted-Forest-Point-View-Adventure-ebook/dp/B0DMQPFJK9" target="_blank" rel="noopener">
+The Enchanted Forest</a>
+            <a href="https://example.com/book-two" target="_blank" rel="noopener">Book 2: (Historical Fiction)</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Ralph Mobley -->
+      <article class="card" role="listitem" aria-labelledby="ralph-name">
+        <div class="avatar" aria-hidden="true">RM</div>
+        <div class="meta">
+          <h2 id="ralph-name">Ralph Mobley</h2>
+          <p class="tagline">Warm, conversational humor about dogs and daily life—stories that wag.</p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Humor</span>
+            <span class="badge">Pet Stories</span>
+            <span class="badge">Blogs</span>
+            <span class="badge">Memoir (in planning)</span>
+          </div>
+
+          <p class="body">
+            Ralph brings a neighborly voice to everyday moments—muddy paws, porch talk, and the punchlines that find us on
+            ordinary Tuesdays. His blog combines quick reads with heart, and he’s now outlining a <em>memoir</em> that threads
+            those anecdotes into a larger life story.
+          </p>
+
+          <nav class="links" aria-label="Ralph's works and links">
+            <a href="https://example.com/ralph-mobley" target="_blank" rel="noopener">Writer Page</a>
+            <a href="https://substack.com/home/post/p-171418539" target="_blank" rel="noopener">Sauthern Dawg!</a>
+            <a href="https://example.com/memoir-updates" target="_blank" rel="noopener">Memoir Updates</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Nelson Ledbetter -->
+      <article class="card" role="listitem" aria-labelledby="nelson-name">
+        <div class="avatar" aria-hidden="true">NL</div>
+        <div class="meta">
+          <h2 id="nelson-name">Nelson Ledbetter</h2>
+          <p class="tagline">Autobiographical journey in progress: <em>Where Has Nelson Been?</em></p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Autobiography</span>
+            <span class="badge">Travel &amp; Work Life</span>
+            <span class="badge">In Progress</span>
+          </div>
+
+          <p class="body">
+            Nelson’s forthcoming book, tentatively titled <em>Where Has Nelson Been?</em>, traces the winding roads of
+            a life well traveled—worksite to waystation, with turning points told plainly and with wit. Follow along as
+            chapters take shape and community stories surface.
+          </p>
+
+          <nav class="links" aria-label="Nelson's works and links">
+            <a href="https://example.com/nelson-ledbetter" target="_blank" rel="noopener">Project Page</a>
+            <a href="https://example.com/nelson-excerpt" target="_blank" rel="noopener">Read a Sample</a>
+            <a href="https://example.com/nelson-newsletter" target="_blank" rel="noopener">Get Email Updates</a>
+          </nav>
+        </div>
+      </article>
+	        <!-- Leta Gail Doerr -->
+      <article class="card" role="listitem" aria-labelledby="ralph-name">
+        <div class="avatar" aria-hidden="true">LGD</div>
+        <div class="meta">
+          <h2 id="leta-name">Leta Gail Doerr</h2>
+          <p class="tagline">Heartfelt romance and small-town drama.</p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Romance</span>
+            <span class="badge">Fictrion</span>
+			<span class="badge">Small-Town Stories</span>
+
+          <p class="body">
+Leta blends heartfelt romance, humor, and 
+			esilience into her novels. 
+			With ten books to her name - including Bluegrass Country #1: For the Love of Big Orange - she writes 
+			about strong-willed women, second chances, and love found in unexpected places. 
+          </p>
+
+          <nav class="links" aria-label="Leta's works and links">
+            <a href="https://example.com/Leta-Doerr" target="_blank" rel="noopener">Writer Page</a>
+            <a href="https://www.goodreads.com/author/show/5349399.Leta_Gail_Doerr" target="_blank" rel="noopener">
+			GoodReads</a>
+            <a href="https://www.amazon.com/stores/Leta-Gail-Doerr/author/B006HNTKSW" target="_blank" rel="noopener">Amazon</a>
+          </nav>
+        </div>
+      </article>
+	        <!-- Irene Gabashvili -->
+      <article class="card" role="listitem" aria-labelledby="ralph-name">
+        <div class="avatar" aria-hidden="true">IG</div>
+        <div class="meta">
+          <h2 id="ralph-name">Irene Gabashvili</h2>
+          <p class="tagline">Scientific curiosity meets storytelling - connecting molecules, minds, and future</p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Health Tech</span>
+            <span class="badge">Bird Stories</span>
+            <span class="badge">Science</span>
+            <span class="badge">Reviews</span>
+          </div>
+
+          <p class="body">
+Dr. Irene Gabashvili blends expertise in biomedical research, AI-driven health technologies, and data science applied to microbiome studies, medical specialties, and sensor innovation. 
+A Stanford Medicine and HP Labs alumna, she has published extensively and lectured worldwide.
+			Scientist and storyteller, weaving physics and biology into lyrical naturalism, satire, and speculative fiction. From molecules to birds, from ecology to philosophy, 
+			Irene searches for patterns - and sometimes imagines the futures they foretell.
+          </p>
+
+          <nav class="links" aria-label="Irene's works and links">
+            <a href="https://www.aurametrix.com/irene-gabashvili.html" target="_blank" rel="noopener">Web Page</a>
+            <a href="https://www.aurametrix.com/Blog/swallows2025.html" target="_blank" rel="noopener">Bird Stories</a>
+            <a href="https://www.aurametrix.com/news-and-views.html" target="_blank" rel="noopener">Blogs</a>
+          </nav>
+        </div>
+      </article>
+	        <!-- Ralph Mobley -->
+      <article class="card" role="listitem" aria-labelledby="ralph-name">
+        <div class="avatar" aria-hidden="true">CA</div>
+        <div class="meta">
+         <h2 id="ralph-name">Chris Allsup</h2>
+          <p class="tagline">Sharp, insightful writing at the crossroads of science, engineering, and everyday reflection.</p>
+
+          <div class="badges" aria-label="Genres & styles">
+            <span class="badge">Poetry</span>
+            <span class="badge">Science & Technology</span>
+            <span class="badge">Engineering & Design</span>
+            <span class="badge">Feature Articles</span>
+          </div>
+
+          <p class="body">
+            Chris Allsup’s work spans technical white papers, feature articles, and reflective poetry, 
+			offering both precision and creativity. With a long publishing history in electronics design, test automation, and community planning, he combines deep expertise with an accessible voice. His recent projects include research on growth modeling for master-planned communities and thought-provoking essays, 
+			balancing hard science with provocative insights.
+          </p>
+
+          <nav class="links" aria-label="Chris's works and links">
+            <a href="https://www.aurametrix.com/chris-allsup.html" target="_blank" rel="noopener">Web Page</a>
+            <a href="https://arxiv.org/abs/2502.09877" target="_blank" rel="noopener">Parking</a>
+            <a href="https://arxiv.org/abs/2410.04676" target="_blank" rel="noopener">Strategizer</a>
+          </nav>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>Are you a writer in Kahite? <a href="mailto:irene@aurametrix.com">Get in touch</a> to be featured.</p>
+      <p>© <span id="year"></span> Kahite Writers. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
