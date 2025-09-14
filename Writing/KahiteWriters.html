@@ -177,14 +177,33 @@
     <header class="hero" role="banner">
       <h1>✍️ Kahite Writers</h1>
       <p>Local voices from the master-planned community of <strong>Kahite</strong>—sharing fantasy, folklore, humor, memoir, and lived experience. Explore their work, follow new releases, and celebrate storytelling close to home.</p>
-      <div class="toolbar" aria-label="Popular topics">
-        <span class="chip">Fantasy</span>
-        <span class="chip">Folklore &amp; Nature</span>
-        <span class="chip">Humor &amp; Pets</span>
-        <span class="chip">Blogs &amp; Essays</span>
-        <span class="chip">Memoir</span>
-        <span class="chip">Autobiography</span>
-      </div>
+ 
+
+
+
+<div class="toolbar" id="topic-toolbar" aria-label="Popular topics"></div>
+
+<script>
+  const categories = [
+    "Fiction",
+    "Memoir & Personal Stories",
+    "Essays & Commentary",
+    "Community & Local",
+    "Research & Insights",
+    "Nature & Folklore"
+  ];
+
+  const toolbar = document.getElementById('topic-toolbar');
+  categories.forEach(cat => {
+    const span = document.createElement('span');
+    span.classList.add('chip');
+    span.textContent = cat;
+    toolbar.appendChild(span);
+  });
+</script>
+
+	  
+	  
     </header>
 
     <main class="grid" role="list">
@@ -193,7 +212,9 @@
         <div class="avatar" aria-hidden="true">BM</div>
         <div class="meta">
           <h2 id="brian-name">Brian Mulliner</h2>
-          <p class="tagline">Folklore-rich fantasy from a child’s magical point of view—imagination with heart.</p>
+          <p class="tagline">
+         Fantasy and history woven with folklore, wonder, and heart.
+          </p>
 
           <div class="badges" aria-label="Genres & styles">
             <span class="badge">Fantasy</span>
@@ -202,15 +223,18 @@
           </div>
 
           <p class="body">
-            Brian’s stories blend woodland lore, wonder, and friendship, told through the eyes of a child narrator.
-            Expect brisk adventures, creature folklore, and quiet moments under starlit trees. His second book
-            broadens his range into <em>historical fiction</em>, bringing the same empathy and sense of place to a different era.
-          </p>
+            
+Brian’s writing blends woodland lore, wonder, and friendship, often through a child’s eyes. 
+His debut captured the magic of escaping the city for forest adventures, 
+while his second book expands into historical fiction, 
+maintaining his signature empathy and sense of place.
+ </p>
 
           <nav class="links" aria-label="Brian's works and links">
             <a href="https://www.amazon.com/Enchanted-Forest-Point-View-Adventure-ebook/dp/B0DMQPFJK9" target="_blank" rel="noopener">
 The Enchanted Forest</a>
-            <a href="https://example.com/book-two" target="_blank" rel="noopener">Book 2: (Historical Fiction)</a>
+            <a href="https://example.com/book-two" target="_blank" rel="noopener">
+			The Waters of Awakening</a>
           </nav>
         </div>
       </article>
@@ -226,7 +250,7 @@ The Enchanted Forest</a>
             <span class="badge">Humor</span>
             <span class="badge">Pet Stories</span>
             <span class="badge">Blogs</span>
-            <span class="badge">Memoir (in planning)</span>
+            <span class="badge">Memoir</span>
           </div>
 
           <p class="body">
@@ -237,7 +261,7 @@ The Enchanted Forest</a>
 
           <nav class="links" aria-label="Ralph's works and links">
             <a href="https://example.com/ralph-mobley" target="_blank" rel="noopener">Writer Page</a>
-            <a href="https://substack.com/home/post/p-171418539" target="_blank" rel="noopener">Sauthern Dawg!</a>
+            <a href="https://dogtags.substack.com" target="_blank" rel="noopener">Southern Dog</a>
             <a href="https://example.com/memoir-updates" target="_blank" rel="noopener">Memoir Updates</a>
           </nav>
         </div>
@@ -282,10 +306,11 @@ The Enchanted Forest</a>
 			<span class="badge">Small-Town Stories</span>
 
           <p class="body">
-Leta blends heartfelt romance, humor, and 
-			esilience into her novels. 
-			With ten books to her name - including Bluegrass Country #1: For the Love of Big Orange - she writes 
-			about strong-willed women, second chances, and love found in unexpected places. 
+			Leta Gail Doerr writes heartfelt romance with humor and resilience. 
+			She is best known for the Bluegrass Country series, featuring strong-willed women, 
+			small-town drama, and love found in unexpected places. 
+			Her novels are celebrated for authentic friendships, 
+			emotional depth, and characters who feel like neighbors you’ve always known.
           </p>
 
           <nav class="links" aria-label="Leta's works and links">
@@ -311,10 +336,10 @@ Leta blends heartfelt romance, humor, and
           </div>
 
           <p class="body">
-Dr. Irene Gabashvili blends expertise in biomedical research, AI-driven health technologies, and data science applied to microbiome studies, medical specialties, and sensor innovation. 
-A Stanford Medicine and HP Labs alumna, she has published extensively and lectured worldwide.
-			Scientist and storyteller, weaving physics and biology into lyrical naturalism, satire, and speculative fiction. From molecules to birds, from ecology to philosophy, 
-			Irene searches for patterns - and sometimes imagines the futures they foretell.
+Dr. Irene Gabashvili is a scientist and storyteller whose work blends physics, 
+biology, and imagination. Drawing on her background in biomedical research and health technology, 
+she writes lyrical naturalism 
+and science fiction that explore patterns in nature and society.
           </p>
 
           <nav class="links" aria-label="Irene's works and links">
@@ -329,19 +354,22 @@ A Stanford Medicine and HP Labs alumna, she has published extensively and lectur
         <div class="avatar" aria-hidden="true">CA</div>
         <div class="meta">
          <h2 id="ralph-name">Chris Allsup</h2>
-          <p class="tagline">Sharp, insightful writing at the crossroads of science, engineering, and everyday reflection.</p>
+          <p class="tagline">Insightful writing at the crossroads of
+		  engineering, data, and reflection.
+		  
+		  </p>
 
           <div class="badges" aria-label="Genres & styles">
-            <span class="badge">Poetry</span>
-            <span class="badge">Science & Technology</span>
-            <span class="badge">Engineering & Design</span>
+            <span class="badge">Technology</span>
+            <span class="badge">Engineering</span>
             <span class="badge">Feature Articles</span>
           </div>
 
           <p class="body">
-            Chris Allsup’s work spans technical white papers, feature articles, and reflective poetry, 
-			offering both precision and creativity. With a long publishing history in electronics design, test automation, and community planning, he combines deep expertise with an accessible voice. His recent projects include research on growth modeling for master-planned communities and thought-provoking essays, 
-			balancing hard science with provocative insights.
+            Chris Allsup’s work spans technical white papers and feature articles. 
+			He has developed novel methods to improve the accuracy of Tellico Village housing forecasts, 
+			designed a data-driven strategic planning tool for master-planned communities, 
+			and engineered a cost-effective solution for estimating parking lot utilization.
           </p>
 
           <nav class="links" aria-label="Chris's works and links">
