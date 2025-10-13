@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kahite Writers • Local Voices from Our Community</title>
-  <meta name="description" content="Meet the writers of Kahite—a master-planned community—celebrating stories, memoir, humor, and magic rooted in our own backyard." />
+  <meta name="description" content="Meet the writers of Kahite - a master-planned community - celebrating stories, memoir, humor, and magic rooted in our own backyard." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
 
   <!-- Open Graph / Twitter -->
@@ -38,21 +38,9 @@
 
     .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
 
-    header.hero {
-      padding: 56px 0 24px;
-      text-align: center;
-    }
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: .5px;
-    }
-    .hero p {
-      margin: 0 auto;
-      max-width: 720px;
-      color: var(--muted);
-      font-size: clamp(1rem, 1.2vw, 1.125rem);
-    }
+    header.hero { padding: 56px 0 24px; text-align: center; }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: .5px; }
+    .hero p { margin: 0 auto; max-width: 720px; color: var(--muted); font-size: clamp(1rem, 1.2vw, 1.125rem); }
 
     .toolbar {
       display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
@@ -82,12 +70,8 @@
       gap: 18px;
       align-items: center;
     }
-    @media (min-width: 760px) {
-      .card { grid-column: span 6; }
-    }
-    @media (min-width: 1020px) {
-      .card { grid-column: span 4; }
-    }
+    @media (min-width: 760px) { .card { grid-column: span 6; } }
+    @media (min-width: 1020px) { .card { grid-column: span 4; } }
 
     .avatar {
       width: 80px; height: 80px; border-radius: 50%;
@@ -102,9 +86,7 @@
       font-size: 1.25rem;
       display: flex; align-items: center; gap: 8px;
     }
-    .tagline {
-      margin: 4px 0 10px; color: var(--muted); font-size: .98rem;
-    }
+    .tagline { margin: 4px 0 10px; color: var(--muted); font-size: .98rem; }
     .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
     .badge {
       background: rgba(252,211,77,.14);
@@ -121,13 +103,9 @@
     }
     .links a:hover { transform: translateY(-1px); filter: saturate(110%); }
 
-    .body {
-      margin-top: 8px; color: var(--text); font-size: .98rem;
-    }
+    .body { margin-top: 8px; color: var(--text); font-size: .98rem; }
 
-    footer {
-      margin: 48px 0 24px; text-align: center; color: var(--muted); font-size: .95rem;
-    }
+    footer { margin: 48px 0 24px; text-align: center; color: var(--muted); font-size: .95rem; }
     footer a { color: var(--accent); }
 
     /* Accessibility: focus styles */
@@ -177,33 +155,25 @@
     <header class="hero" role="banner">
       <h1>✍️ Kahite Writers</h1>
       <p>Local voices from the master-planned community of <strong>Kahite</strong>—sharing fantasy, folklore, humor, memoir, and lived experience. Explore their work, follow new releases, and celebrate storytelling close to home.</p>
- 
 
-
-
-<div class="toolbar" id="topic-toolbar" aria-label="Popular topics"></div>
-
-<script>
-  const categories = [
-    "Fiction",
-    "Memoir & Personal Stories",
-    "Essays & Commentary",
-    "Community & Local",
-    "Research & Insights",
-    "Nature & Folklore"
-  ];
-
-  const toolbar = document.getElementById('topic-toolbar');
-  categories.forEach(cat => {
-    const span = document.createElement('span');
-    span.classList.add('chip');
-    span.textContent = cat;
-    toolbar.appendChild(span);
-  });
-</script>
-
-	  
-	  
+      <div class="toolbar" id="topic-toolbar" aria-label="Popular topics"></div>
+      <script>
+        const categories = [
+          "Fiction",
+          "Memoir & Personal Stories",
+          "Essays & Commentary",
+          "Community & Local",
+          "Research & Insights",
+          "Nature & Folklore"
+        ];
+        const toolbar = document.getElementById('topic-toolbar');
+        categories.forEach(cat => {
+          const span = document.createElement('span');
+          span.classList.add('chip');
+          span.textContent = cat;
+          toolbar.appendChild(span);
+        });
+      </script>
     </header>
 
     <main class="grid" role="list">
@@ -212,9 +182,7 @@
         <div class="avatar" aria-hidden="true">BM</div>
         <div class="meta">
           <h2 id="brian-name">Brian Mulliner</h2>
-          <p class="tagline">
-         Fantasy and history woven with folklore, wonder, and heart.
-          </p>
+          <p class="tagline">Fantasy and history woven with folklore, wonder, and heart.</p>
 
           <div class="badges" aria-label="Genres & styles">
             <span class="badge">Fantasy</span>
@@ -223,18 +191,15 @@
           </div>
 
           <p class="body">
-            
-Brian’s writing blends woodland lore, wonder, and friendship, often through a child’s eyes. 
-His debut captured the magic of escaping the city for forest adventures, 
-while his second book expands into historical fiction, 
-maintaining his signature empathy and sense of place.
- </p>
+            Brian’s writing blends woodland lore, wonder, and friendship, often through a child’s eyes.
+            His debut captured the magic of escaping the city for forest adventures,
+            while his second book expands into historical fiction,
+            maintaining his signature empathy and sense of place.
+          </p>
 
           <nav class="links" aria-label="Brian's works and links">
-            <a href="https://www.amazon.com/Enchanted-Forest-Point-View-Adventure-ebook/dp/B0DMQPFJK9" target="_blank" rel="noopener">
-The Enchanted Forest</a>
-            <a href="https://example.com/book-two" target="_blank" rel="noopener">
-			The Waters of Awakening</a>
+            <a href="https://www.amazon.com/Enchanted-Forest-Point-View-Adventure-ebook/dp/B0DMQPFJK9" target="_blank" rel="noopener noreferrer">The Enchanted Forest</a>
+            <a href="https://www.amazon.com/Waters-Awakening-Brian-Mulliner-ebook/dp/B0FTTN26GW" target="_blank" rel="noopener noreferrer">The Waters of Awakening</a>
           </nav>
         </div>
       </article>
@@ -260,9 +225,9 @@ The Enchanted Forest</a>
           </p>
 
           <nav class="links" aria-label="Ralph's works and links">
-            <a href="https://example.com/ralph-mobley" target="_blank" rel="noopener">Writer Page</a>
-            <a href="https://dogtags.substack.com" target="_blank" rel="noopener">Southern Dog</a>
-            <a href="https://example.com/memoir-updates" target="_blank" rel="noopener">Memoir Updates</a>
+            <a href="https://example.com/ralph-mobley" target="_blank" rel="noopener noreferrer">Writer Page</a>
+            <a href="https://dogtags.substack.com" target="_blank" rel="noopener noreferrer">Southern Dog</a>
+            <a href="https://example.com/memoir-updates" target="_blank" rel="noopener noreferrer">Memoir Updates</a>
           </nav>
         </div>
       </article>
@@ -287,14 +252,15 @@ The Enchanted Forest</a>
           </p>
 
           <nav class="links" aria-label="Nelson's works and links">
-            <a href="https://example.com/nelson-ledbetter" target="_blank" rel="noopener">Project Page</a>
-            <a href="https://example.com/nelson-excerpt" target="_blank" rel="noopener">Read a Sample</a>
-            <a href="https://example.com/nelson-newsletter" target="_blank" rel="noopener">Get Email Updates</a>
+            <a href="https://example.com/nelson-ledbetter" target="_blank" rel="noopener noreferrer">Project Page</a>
+            <a href="https://example.com/nelson-excerpt" target="_blank" rel="noopener noreferrer">Read a Sample</a>
+            <a href="https://example.com/nelson-newsletter" target="_blank" rel="noopener noreferrer">Get Email Updates</a>
           </nav>
         </div>
       </article>
-	        <!-- Leta Gail Doerr -->
-      <article class="card" role="listitem" aria-labelledby="ralph-name">
+
+      <!-- Leta Gail Doerr -->
+      <article class="card" role="listitem" aria-labelledby="leta-name">
         <div class="avatar" aria-hidden="true">LGD</div>
         <div class="meta">
           <h2 id="leta-name">Leta Gail Doerr</h2>
@@ -302,31 +268,32 @@ The Enchanted Forest</a>
 
           <div class="badges" aria-label="Genres & styles">
             <span class="badge">Romance</span>
-            <span class="badge">Fictrion</span>
-			<span class="badge">Small-Town Stories</span>
+            <span class="badge">Fiction</span>
+            <span class="badge">Small-Town Stories</span>
+          </div>
 
           <p class="body">
-			Leta Gail Doerr writes heartfelt romance with humor and resilience. 
-			She is best known for the Bluegrass Country series, featuring strong-willed women, 
-			small-town drama, and love found in unexpected places. 
-			Her novels are celebrated for authentic friendships, 
-			emotional depth, and characters who feel like neighbors you’ve always known.
+            Leta Gail Doerr writes heartfelt romance with humor and resilience.
+            She is best known for the Bluegrass Country series, featuring strong-willed women,
+            small-town drama, and love found in unexpected places.
+            Her novels are celebrated for authentic friendships,
+            emotional depth, and characters who feel like neighbors you’ve always known.
           </p>
 
           <nav class="links" aria-label="Leta's works and links">
-            <a href="https://example.com/Leta-Doerr" target="_blank" rel="noopener">Writer Page</a>
-            <a href="https://www.goodreads.com/author/show/5349399.Leta_Gail_Doerr" target="_blank" rel="noopener">
-			GoodReads</a>
-            <a href="https://www.amazon.com/stores/Leta-Gail-Doerr/author/B006HNTKSW" target="_blank" rel="noopener">Amazon</a>
+            <a href="https://example.com/Leta-Doerr" target="_blank" rel="noopener noreferrer">Writer Page</a>
+            <a href="https://www.goodreads.com/author/show/5349399.Leta_Gail_Doerr" target="_blank" rel="noopener noreferrer">GoodReads</a>
+            <a href="https://www.amazon.com/stores/Leta-Gail-Doerr/author/B006HNTKSW" target="_blank" rel="noopener noreferrer">Amazon</a>
           </nav>
         </div>
       </article>
-	        <!-- Irene Gabashvili -->
-      <article class="card" role="listitem" aria-labelledby="ralph-name">
+
+      <!-- Irene Gabashvili -->
+      <article class="card" role="listitem" aria-labelledby="irene-name">
         <div class="avatar" aria-hidden="true">IG</div>
         <div class="meta">
-          <h2 id="ralph-name">Irene Gabashvili</h2>
-          <p class="tagline">Scientific curiosity meets storytelling - connecting molecules, minds, and future</p>
+          <h2 id="irene-name">Irene Gabashvili</h2>
+          <p class="tagline">Scientific curiosity meets storytelling — connecting molecules, minds, and future.</p>
 
           <div class="badges" aria-label="Genres & styles">
             <span class="badge">Health Tech</span>
@@ -336,28 +303,25 @@ The Enchanted Forest</a>
           </div>
 
           <p class="body">
-Dr. Irene Gabashvili is a scientist and storyteller whose work blends physics, 
-biology, and imagination. Drawing on her background in biomedical research and health technology, 
-she writes lyrical naturalism 
-and science fiction that explore patterns in nature and society.
+            Dr. Irene Gabashvili is a scientist and storyteller whose work blends physics,
+            biology, and imagination. Drawing on her background in biomedical research and health technology,
+            she writes lyrical naturalism and science fiction that explore patterns in nature and society.
           </p>
 
           <nav class="links" aria-label="Irene's works and links">
-            <a href="https://www.aurametrix.com/irene-gabashvili.html" target="_blank" rel="noopener">Web Page</a>
-            <a href="https://www.aurametrix.com/Blog/swallows2025.html" target="_blank" rel="noopener">Bird Stories</a>
-            <a href="https://www.aurametrix.com/news-and-views.html" target="_blank" rel="noopener">Blogs</a>
+            <a href="https://www.aurametrix.com/irene-gabashvili.html" target="_blank" rel="noopener noreferrer">Web Page</a>
+            <a href="https://www.aurametrix.com/Blog/swallows2025.html" target="_blank" rel="noopener noreferrer">Bird Stories</a>
+            <a href="https://www.aurametrix.com/news-and-views.html" target="_blank" rel="noopener noreferrer">Blogs</a>
           </nav>
         </div>
       </article>
-	        <!-- Ralph Mobley -->
-      <article class="card" role="listitem" aria-labelledby="ralph-name">
+
+      <!-- Chris Allsup -->
+      <article class="card" role="listitem" aria-labelledby="chris-name">
         <div class="avatar" aria-hidden="true">CA</div>
         <div class="meta">
-         <h2 id="ralph-name">Chris Allsup</h2>
-          <p class="tagline">Insightful writing at the crossroads of
-		  engineering, data, and reflection.
-		  
-		  </p>
+          <h2 id="chris-name">Chris Allsup</h2>
+          <p class="tagline">Insightful writing at the crossroads of engineering, data, and reflection.</p>
 
           <div class="badges" aria-label="Genres & styles">
             <span class="badge">Technology</span>
@@ -366,16 +330,16 @@ and science fiction that explore patterns in nature and society.
           </div>
 
           <p class="body">
-            Chris Allsup’s work spans technical white papers and feature articles. 
-			He has developed novel methods to improve the accuracy of Tellico Village housing forecasts, 
-			designed a data-driven strategic planning tool for master-planned communities, 
-			and engineered a cost-effective solution for estimating parking lot utilization.
+            Chris Allsup’s work spans technical white papers and feature articles.
+            He has developed novel methods to improve the accuracy of Tellico Village housing forecasts,
+            designed a data-driven strategic planning tool for master-planned communities,
+            and engineered a cost-effective solution for estimating parking lot utilization.
           </p>
 
           <nav class="links" aria-label="Chris's works and links">
-            <a href="https://www.aurametrix.com/chris-allsup.html" target="_blank" rel="noopener">Web Page</a>
-            <a href="https://arxiv.org/abs/2502.09877" target="_blank" rel="noopener">Parking</a>
-            <a href="https://arxiv.org/abs/2410.04676" target="_blank" rel="noopener">Strategizer</a>
+            <a href="https://www.aurametrix.com/chris-allsup.html" target="_blank" rel="noopener noreferrer">Web Page</a>
+            <a href="https://arxiv.org/abs/2502.09877" target="_blank" rel="noopener noreferrer">Parking</a>
+            <a href="https://arxiv.org/abs/2410.04676" target="_blank" rel="noopener noreferrer">Strategizer</a>
           </nav>
         </div>
       </article>
