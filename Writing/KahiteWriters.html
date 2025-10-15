@@ -66,26 +66,33 @@
       box-shadow: var(--shadow);
       padding: 22px;
       display: grid;
-      grid-template-columns: 96px 1fr;
+      grid-template-columns: 1fr;
       gap: 18px;
-      align-items: center;
+      align-items: start;
     }
     @media (min-width: 760px) { .card { grid-column: span 6; } }
     @media (min-width: 1020px) { .card { grid-column: span 4; } }
 
     .avatar {
-      width: 80px; height: 80px; border-radius: 50%;
-      display: grid; place-items: center;
-      background: radial-gradient(circle at 30% 30%, rgba(252,211,77,.35), rgba(167,243,208,.25));
-      border: 1px solid rgba(255,255,255,.2);
-      color: #111; font-weight: 800; font-size: 1.4rem;
-    }
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background: none;
+  color: transparent;
+  font-size: 0;
+  margin: 0 auto 8px;
+}
 
     .meta h2 {
       margin: 0;
       font-size: 1.25rem;
       display: flex; align-items: center; gap: 8px;
-    }
+      text-align: center;
+}
     .tagline { margin: 4px 0 10px; color: var(--muted); font-size: .98rem; }
     .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px; }
     .badge {
@@ -179,7 +186,7 @@
     <main class="grid" role="list">
       <!-- Brian Mulliner -->
       <article class="card" role="listitem" aria-labelledby="brian-name">
-        <div class="avatar" aria-hidden="true">BM</div>
+        <img class="avatar" src="https://m.media-amazon.com/images/S/amzn-author-media-prod/bfu1lr2slcetm4i75bdg463d3c._SX300_CR0,0,300,300_.jpg" alt="BM avatar" />
         <div class="meta">
           <h2 id="brian-name">Brian Mulliner</h2>
           <p class="tagline">Fantasy and history woven with folklore, wonder, and heart.</p>
@@ -198,6 +205,8 @@
           </p>
 
           <nav class="links" aria-label="Brian's works and links">
+		              <a href="https://www.amazon.com/stores/author/B0DR9GTWNR/about" target="_blank" rel="noopener noreferrer">Bio</a>
+		  
             <a href="https://www.amazon.com/Enchanted-Forest-Point-View-Adventure-ebook/dp/B0DMQPFJK9" target="_blank" rel="noopener noreferrer">The Enchanted Forest</a>
             <a href="https://www.amazon.com/Waters-Awakening-Brian-Mulliner-ebook/dp/B0FTTN26GW" target="_blank" rel="noopener noreferrer">The Waters of Awakening</a>
           </nav>
@@ -206,7 +215,7 @@
 
       <!-- Ralph Mobley -->
       <article class="card" role="listitem" aria-labelledby="ralph-name">
-        <div class="avatar" aria-hidden="true">RM</div>
+        <img class="avatar" src="RM.png" alt="RM avatar" />
         <div class="meta">
           <h2 id="ralph-name">Ralph Mobley</h2>
           <p class="tagline">Warm, conversational humor about dogs and daily life—stories that wag.</p>
@@ -234,7 +243,7 @@
 
       <!-- Nelson Ledbetter -->
       <article class="card" role="listitem" aria-labelledby="nelson-name">
-        <div class="avatar" aria-hidden="true">NL</div>
+        <img class="avatar" src="NL.png" alt="NL avatar" />
         <div class="meta">
           <h2 id="nelson-name">Nelson Ledbetter</h2>
           <p class="tagline">Autobiographical journey in progress: <em>Where Has Nelson Been?</em></p>
@@ -261,8 +270,9 @@
 
       <!-- Leta Gail Doerr -->
       <article class="card" role="listitem" aria-labelledby="leta-name">
-        <div class="avatar" aria-hidden="true">LGD</div>
-        <div class="meta">
+ 
+        <img class="avatar" src="https://m.media-amazon.com/images/I/41FFThQ1UFL._SX250_CR0%2C0%2C250%2C250_.jpg" alt="BM avatar" />
+         <div class="meta">
           <h2 id="leta-name">Leta Gail Doerr</h2>
           <p class="tagline">Heartfelt romance and small-town drama.</p>
 
@@ -281,7 +291,7 @@
           </p>
 
           <nav class="links" aria-label="Leta's works and links">
-            <a href="https://example.com/Leta-Doerr" target="_blank" rel="noopener noreferrer">Writer Page</a>
+            <a href="https://letagail.wixsite.com/letagail/bio" target="_blank" rel="noopener noreferrer">Writer Page</a>
             <a href="https://www.goodreads.com/author/show/5349399.Leta_Gail_Doerr" target="_blank" rel="noopener noreferrer">GoodReads</a>
             <a href="https://www.amazon.com/stores/Leta-Gail-Doerr/author/B006HNTKSW" target="_blank" rel="noopener noreferrer">Amazon</a>
           </nav>
@@ -290,7 +300,9 @@
 
       <!-- Irene Gabashvili -->
       <article class="card" role="listitem" aria-labelledby="irene-name">
-        <div class="avatar" aria-hidden="true">IG</div>
+        <img class="avatar" src="
+		../tmp_files/820352166.jpeg
+		" alt="IG avatar" />
         <div class="meta">
           <h2 id="irene-name">Irene Gabashvili</h2>
           <p class="tagline">Scientific curiosity meets storytelling — connecting molecules, minds, and future.</p>
@@ -318,7 +330,9 @@
 
       <!-- Chris Allsup -->
       <article class="card" role="listitem" aria-labelledby="chris-name">
-        <div class="avatar" aria-hidden="true">CA</div>
+        <img class="avatar" src="
+		../tmp_files/473832948_orig.jpg
+		" alt="CA avatar" />
         <div class="meta">
           <h2 id="chris-name">Chris Allsup</h2>
           <p class="tagline">Insightful writing at the crossroads of engineering, data, and reflection.</p>
