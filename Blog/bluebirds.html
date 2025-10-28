@@ -19,62 +19,45 @@
       background-color: #f4f4f4;
       color: #333;
     }
-    .container {
-      width: 90%;
-      margin: auto;
-      padding: 20px;
-      max-width: 1200px;
-    }
-    .header {
-      text-align: center;
-      padding: 20px 0;
-    }
-    .header h1, .header h2 {
-      font-size: 2em;
-      margin: 0.25em 0;
-    }
-    .header ul {
-      padding: 0;
-      list-style: none;
-      margin-bottom: 1em;
-    }
-    .header li {
-      display: inline;
-      margin-right: 15px;
-    }
+    .container { width: 90%; margin: auto; padding: 20px; max-width: 1200px; }
+    .header { text-align: center; padding: 20px 0; }
+    .header h1, .header h2 { font-size: 2em; margin: 0.25em 0; }
+    .header ul { padding: 0; list-style: none; margin-bottom: 1em; }
+    .header li { display: inline; margin-right: 15px; }
+
     .blog-post {
       background-color: #fff;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    /* Responsive flex for title & image row */
+
+    /* --- Media row: text + image --- */
     .blog-post-row {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr clamp(140px, 24vw, 220px);
       gap: 18px;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: start;            /* top-align both columns */
     }
-    .blog-post-row-content {
-      flex: 1 1 240px;
-      min-width: 180px;
-    }
-    .blog-post-row img {
-      max-width: 160px;
-      width: 28vw;
+    .blog-post-row-content { min-width: 220px; }
+    .blog-post-thumb { justify-self: end; } /* keep image hugging the right edge */
+    .blog-post-thumb img {
+      width: 100%;
       height: auto;
+      display: block;
       border-radius: 8px;
-      flex-shrink: 0;
+      /* Optional: stabilize layout; crop if the source aspect ratio jumps around */
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
     }
-    /* Image grid responsive */
+
+    /* Image grid */
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 24px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
     .image-item {
       background: #fafafa;
@@ -89,29 +72,27 @@
       max-width: 320px;
       border-radius: 6px;
       margin-bottom: 10px;
+      display: block;
     }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-    }
+
+    .footer { text-align: center; padding: 20px; background-color: #333; color: #fff; }
+
     @media (max-width: 768px) {
-      .header h1, .header h2 {
-        font-size: 1.4em;
-      }
-      .blog-post {
-        padding: 14px;
-      }
-      .blog-post-row img {
-        max-width: 100px;
-        width: 38vw;
+      .header h1, .header h2 { font-size: 1.4em; }
+      .blog-post { padding: 14px; }
+      .blog-post-row {
+        grid-template-columns: 1fr clamp(110px, 32vw, 160px);
+        gap: 14px;
       }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
+      /* Stack on small screens; put image after the text */
+      .blog-post-row {
+        grid-template-columns: 1fr;
+      }
+      .blog-post-thumb { justify-self: center; }
+      .blog-post-thumb img { max-width: 260px; } /* keep it pleasant when centered */
       .container { padding: 7px; }
-      .blog-post-row { gap: 8px; }
-      .blog-post-row img { max-width: 75px; }
     }
   </style>
 </head>
@@ -124,11 +105,9 @@
       <li><a href="../Blog/titmice2020.html">Titmice</a></li>
       <li><a href="../Blog/bluebirds.html">Bluebirds</a></li>
       <li>Swallows: <a href="../blog/swallows.html">2020</a>; <a href="../Blog/swallows2025.html">2025</a></li>
-        <li><a href="https://environment.aurametrix.com/2025/09/restless-wings-glimpse-from-whigg-meadow.html">Warblers</a></li>    
-       <li><a href="https://environment.aurametrix.com/2025/08/the-eighteen-boxes-of-spring.html">Golf</a></li>
-  
-
-  </ul>
+      <li><a href="https://environment.aurametrix.com/2025/09/restless-wings-glimpse-from-whigg-meadow.html">Warblers</a></li>
+      <li><a href="https://environment.aurametrix.com/2025/08/the-eighteen-boxes-of-spring.html">Golf</a></li>
+    </ul>
     <h2><a href="../blog.html">Other Stories</a></h2>
   </div>
 
@@ -136,20 +115,70 @@
     <div class="blog-post-row">
       <div class="blog-post-row-content">
         <h2>Bluebirds</h2>
-        <p>Chronicles from spring 2021</p>
-        <!-- Add your text here. It will wrap neatly next to the image and stack under it on mobile. -->
-      </div>
-      <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="Bluebird">
+        <p>Chronicles from spring 2021 and 2025</p>
+2021 was a good year for the bluebirds. Unfortunately, it wasn’t as good for us -  
+COVID took my dad that year, and I couldn’t bring myself to write their story then.
+But this spring, in 2025, I’d like to share two other bluebird stories: 
+one from 
+  
+  <a href="https://www.facebook.com/groups/910478769698143/user/38914956/">
+  Hilda Chambers Young in Alabama</a>, 
+  and another from Sue’s Coneflower Cottage.
+<p>
+  
+
+<center><h3>Bossy and Bluey</h3></center>
+
+The first light of spring always fell softly on the fencepost where the bluebirds returned — a shimmer of sky come to earth. 
+Every year, before the lilacs bloomed, Bossy and Bluey would come back to their box beneath the old umbrella of shade. 
+They were a pair known to the yard, to the feeder, to the whistle that meant mealworms and safety.
+
+Bluey was a gentle fellow — feathers the color of summer twilight, with faint white brushstrokes upon his wings like the last touch of daylight on cloud edges. 
+Bossy, his bold-hearted mate, was his opposite: the true keeper of their little kingdom. She ruled the fence line and the windows, 
+tapping her mirrored rival with a furious rhythm that startled cats and children alike. She was the flame that held the skybird in her orbit.
+
+Together, they had filled that wooden box with life, season after season. Nine young had come from their labor that year already — each one a drop of blue sky given shape and breath. 
+By June, they had begun again. Bossy’s belly grew round with new promise, and Bluey sang from the post each morning, as though the air itself might bless their third brood.
+
+But one day, Bluey did not come back.
+
+For a time, Bossy called. Her cry was sharp, desperate, and tender — a sound that passed through leaves and settled in the human heart. She looked from wire to tree to rooftop, her bright eyes flashing with refusal. Yet the sky gave no answer, and the silent hawk’s shadow moved like fate across the grass.
+
+Still, she would not quit. There were four pale eggs beneath her, and something fierce within her that would not die. Days later, another male came — young, uncertain, his blue dull and untested. Somehow, Bossy allowed him near. Perhaps she saw in him only the faint echo of the one she’d lost, or perhaps she simply knew the ancient rule of survival: life must continue.
+
+Three of her eggs broke open, one by one, releasing small trembling hearts to the world. Bossy brooded them through the warm nights, feathers close, eyes half-shut in the labor of love. On the third night, the yard grew still. No tap on the window. No song at dawn. Bossy, too, was gone.
+
+The young male stayed. Awkward and bewildered, he carried his gifts — grasshoppers too large, beetles too hard — and laid them at the tiny open mouths that gaped for something softer, smaller, easier to swallow. His inexperience was pitiful and pure. At night he perched above the nest box, feathers fluffed against the dark, watching but unable to warm the fragile bodies below.
+
+Two of the nestlings faded quietly, their breaths slipping back into the night from which they had come. But one — a small, determined pulse of blue — held on. The young male learned, slowly, painfully. With the help of the hand that offered mealworms from the house, he began to feed better. And somehow, the last little one endured, growing feathers like soft dawn and courage like its mother’s.
+
+On the nineteenth day, the nest was empty. A fledgling darted through the camellias, flashing blue among pink blossoms. The stepfather followed close behind — protective now, proud perhaps — and together they vanished into the green distance.
+
+Sometimes, when the wind is soft and the yard hums with bees, a bit of blue still flickers in the corner of sight. A flutter near the feeder. A memory in motion. The whistle sounds, and though no wings answer, the air seems to pause — as if listening.
+
+So ends the season of Bossy and Bluey: a love shaped by sky, shadowed by loss, but never undone. For even in the quiet box beneath the shade umbrella, there remains the echo of their song — two small, steadfast hearts that once made the world a little more blue, and a little more brave.
+
+<p>
+<center><h3>The Coneflower Cottage</h3></center>
+
+     </div>
+
+      <!-- Use a wrapper so we can control alignment cleanly -->
+      <figure class="blog-post-thumb">
+        <img src="../images/Stories/2025/HildasBlueBird.jpg"
+             alt="Bluebird"
+             loading="lazy" decoding="async">
+      </figure>
     </div>
   </div>
 
   <div class="image-grid">
     <div class="image-item">
-      <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="Bluebird in the box">
+      <img src="../images/Stories/2000/BlueBirds/bluebird-May14.jpg" alt="Bluebird in the box" loading="lazy" decoding="async">
       <p>Bluebird peeking out of the nest box, May 14</p>
     </div>
     <div class="image-item">
-      <img src="../images/Stories/2000/BlueBirds/ClosertoFledging.jpg" alt="getting ready to fledge">
+      <img src="../images/Stories/2000/BlueBirds/ClosertoFledging.jpg" alt="getting ready to fledge" loading="lazy" decoding="async">
       <p>Getting ready to fledge</p>
     </div>
     <!-- to be continued -->
