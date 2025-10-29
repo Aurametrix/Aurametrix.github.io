@@ -3,212 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stories by Irene Gabashvili</title>
-  
+  <title>Чувствительный Дом – Irene Gabashvili</title>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
-  
-  <meta name="description" content="A selection of creative writing by Irene Gabashvili." />
+
+  <meta name="description" content="Чувствительный  Дом или Руководство для начинающих по органическому домовладению " />
   <style>
     :root {
       --bg: #ffffff;
       --fg: #1e1e1e;
       --muted: #5b5b5b;
-      --card: #f6f6f6;
       --link: #0b5fff;
-      --ring: #9db7ff;
+      --card: #f6f6f6;
       --radius: 12px;
-      --maxw: 860px;
+      --maxw: 760px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0f1115;
         --fg: #e7e7e7;
         --muted: #a3a3a3;
-        --card: #171a20;
         --link: #8fb4ff;
-        --ring: #2442a3;
+        --card: #171a20;
       }
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background: var(--bg);
       color: var(--fg);
       display: flex;
       justify-content: center;
     }
-    .wrap {
+    main {
       width: 100%;
       max-width: var(--maxw);
       padding: 28px 18px 60px;
     }
-    header h1 {
-      margin: 0 0 6px;
+    h1 {
       font-size: clamp(28px, 4vw, 40px);
-      letter-spacing: -0.02em;
+      margin-bottom: 10px;
     }
-    header p { margin: 0; color: var(--muted); }
-    .stories {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    @media (min-width: 720px) {
-      .stories { grid-template-columns: 1fr 1fr; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 20px;
     }
     article {
       background: var(--card);
+      padding: 20px;
       border-radius: var(--radius);
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(0,0,0,0.06);
-      outline: 0;
     }
-    article:focus-within {
-      box-shadow: 0 0 0 3px var(--ring);
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: var(--radius);
+      margin-top: 20px;
     }
-    h2 {
-      margin: 0 0 6px;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-    }
-    .meta {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tag {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.06);
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-    @media (prefers-color-scheme: dark) {
-      article { border-color: rgba(255,255,255,0.08); }
-      .tag { background: rgba(255,255,255,0.08); }
-    }
-    .summary { margin: 8px 0 0; }
     footer {
-      margin-top: 34px;
+      text-align: center;
+      margin-top: 40px;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: center;
     }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .visually-hidden {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
-      clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-    }
+	
+	.video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #000;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
   </style>
 </head>
 <body>
-  <main class="wrap" aria-labelledby="page-title">
-    <header>
-      <h1 id="page-title">Stories by Irene Gabashvili</h1>
-      <p>Selected creative writing—short fiction, experiments, and notes in progress.</p>
-    </header>
+  <main>
+    <h1>Чувствительный  Дом или Руководство для начинающих по органическому домовладению </h1>
+    <p class="meta">By Irene Gabashvili • Short Sci-Fi</p>
 
-    <section class="stories" aria-label="Story list">
-	
-	      <!-- The Work of Air -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="https://aurametrix.substack.com/p/the-house-that-felt-too-much">The House that Felt Too Much</a></h2>
-        <p class="meta">
-          <span class="tag" itemprop="genre">Short Sci-Fi</span>
-          <span class="tag">Collection: <span itemprop="isPartOf">Notes from The Future</span></span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          <!-- 1–2 sentence summary -->
-         Imagine planting a seed and watching it sprout into a house. 
-        </p>
-      </article>
-	  
-	  
-      <!-- The Work of Air -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="https://aurametrix.substack.com/p/the-work-of-air">The Work of Air</a></h2>
-        <p class="meta">
-          <span class="tag" itemprop="genre">Short Sci-Fi</span>
-          <span class="tag">Collection: <span itemprop="isPartOf">Notes from The Future</span></span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          <!-- 1–2 sentence summary -->
-          The tower breathes. The air remembers. 
-		  But who is really being optimized?
-        </p>
-      </article>
+    <article>
+<p>Маркус стоял на своем пустом участке, держа в руках семечко размером с арбуз. Продавец от Доморастительной корпорации заверил его, что это семечко "идеально подходит для начинающих домовладельцев". Брошюра обещала Жизнь без усилий, показывая сияющую пару, потягивающую вино в идеально сферическом, биолюминесцентном доме. Просто добавьте воды и любви и наблюдайте, как расцветает ваш вечный дом!&nbsp;</p><p>У Маркуса, к сожалению, не было ни легкой руки, ни терпения, ни навыков в строительстве и никакого понятия о том как расти дом.&nbsp;&nbsp;</p><p>Первый день после посадки прошел без проишествий. К третьему дню белые нити фундамента распространились по почве как паутина. К седьмому дню&nbsp;несущая конструкция была готова но время текло слишком медленно.&nbsp; &nbsp;Удобрение гормоном роста, пробормотал Маркус, выливая всю бутылку на прорастающие стенки. «Ну и что может пойти не так?»</p> К утру в восточной стене выросли окна, которые смотрели на него с укоризной<div><br />«Ты слишком много поливаешь», – сказала через забор соседка Майя. «И изоляция у тебя какая-то хмурая».&nbsp;Ее элегантный дом тихон зашуршал ставнями, словно осуждая.&nbsp; <br /><br /></div><div>Последующие недели стали настоящим испытанием для домашнего выращивания.&nbsp; От избытка воды кухня превратилась в болото, из каждого угла росли съедобные грибы. Маркус забыл спеть колыбельную спальне и она начала тревожно светиться по ночам.</div><div><br />Затем подвели нейронные сети.&nbsp;Маркус, следуя видеоуроку на YouTube от подростка, который называл себя «домашним хакером», случайно скрестил развлекательную систему с измельчителем пищевых отходов. Теперь по телевизору показывали только документальные фильмы о компосте.</div><br />Сантехника была не лучше. В инструкции было сказано «подкармливать дом минеральными добавками». Всё было просто, но Маркус и тут умудрился что-то перепутать, и кухонная раковина начала направлять сточные воды в посудомоечную машину.<br /><br />Тем временем у гостевой комнаты развилась социальная тревожность и она сьеживалась каждый раз, когда приходили незнакомцы, а гараж отказывался принимать автомобили.<br /><br />«Нужно регулярно обрезать стены», посоветовала Майя, застав его в отчаянии слушаюшего неопределённые булькающие звуки раздаюшиеся из крышы. «Дома — как бонсай. Нужно направлять их рост».<br /><br />Вооружившись книгой «чего ожидать, когда ждёшь», Маркус начал деликатный процесс вырашивания дома. Он включил в своей спальне записи белого шума, в которых тихонько поскрипывали готовые дома. Он нанял специалиста по «воинственной архитектуре», чтобы тот распутал нейронную сеть. В основном это получилось, хотя Барнаби (так Маркус теперь назвал дом в отчаянной попытке наладить с ним связь) всё ещё сливал бачок в унитазе во время сентиментальных сцен в телевизоре.<div><br />К четвёртому месяцу Барнаби вступил в бунтарскую фазу. После каждой дозы ингибитора роста стены покрывались хмурым пурпурным налётом и капали смолой. Когда Маркус позвонил в техподдержку, скучающий техник посоветовал: «Попробуй дать электрошок корневой системы. Хряпни тазером по коврику входной двери чтобы перезагрузить систему».<br /><br />Он попытался. Барнаби вырастил мох на северной стороне дивана.<br /><br />Но однажды вечером, когда начался дождь, Барнаби мягко засиял, мерцая биолюминесцентным теплом. Стены изменили плотность, чтобы поддержать воздух на двадцати двух градусах. Впервые всё была точно так как он хотел.<br /><br />Когда Маркус лежал в своей наконец-то горизонтальной спальне, стены нначали мягко пульсировать в медленном, ровном ритме. Дом дышал, фильтровал воздух, регулировал температуру и даже играл фоновую музыку через свои естественно акустические поверхности.<br /><br />Завибрировал телефон: сообщение от матери. Отправь фотографии дома!</div><div><br />Маркус оглядел свой слегка покосившийся дом и напечатал в ответ:<br />Всё ещё растём. Но, думаю, все будет хорошо.<br /><br />Барнаби тихонько мурлыкал (точно не по инструкции!), но Маркус решил не беспокоиться. Он еше раз оглядел свой несовершенный дом и улыбнулся. В конце концов, я и сам не идеален.<br /><br />Он только надеялся, что Барнаби не подхватит голландскую болезнь вязов, как дом того парня по соседству. 
+Его крыша зачихала себя насмерть, и починка обошлась довольно дорого.</div><div><br /></div><div><br /></div><div><div>
 
-      <!-- Keeper and Leaf -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="swallows2025.html">Keeper and Leaf</a></h2>
-        <p class="meta">
-          <span class="tag" itemprop="genre">Contemplative Nonfiction</span>
-		    <span class="tag" itemprop="genre">Romantic Naturalism</span>
-        </p>
-        <p class="summary" itemprop="abstract">
-		 
-		  A story written in feathers and flight, traces swallows through storms 
-		  and the quiet persistence of love.
-        </p>
-      </article>
-
-      <!-- Mr. and Mrs. Pi -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="finches.html">Mr. and Mrs. Pi</a></h2>
-        <p class="meta">
-          <span class="tag" itemprop="genre">Eco-memoir</span>
-		    <span class="tag" itemprop="genre">Romantic Naturalism</span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          From a startled drop of straw to five years of song and flight.
-        </p>
-      </article>
-
-      <!-- The Eighteen Boxes of Spring -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="https://environment.aurametrix.com/2025/08/the-eighteen-boxes-of-spring.html">
-		The Eighteen Boxes of Spring</a></h2>
-        <p class="meta">
-		  <span class="tag" itemprop="genre">Field Notes</span>
-          <span class="tag" itemprop="genre">Romantic Naturalism</span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          Eighteen boxes. One unforgettable season on the wing.
-        </p>
-      </article>
-	  
-	       <!-- The Eighteen Boxes of Spring -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="https://environment.aurametrix.com/2025/09/restless-wings-glimpse-from-whigg-meadow.html">Restless Wings</a></h2>
-        <p class="meta">
-		  <span class="tag" itemprop="genre">Lyric Essays</span>
-          <span class="tag" itemprop="genre">Romantic Naturalism</span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          Home is less a place than a faith carried on restless wings.
-        </p>
-      </article>
-	  
-	       <!-- The Eighteen Boxes of Spring -->
-      <article itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 itemprop="name"><a href="../blog/swallows.html">When The Swallows Come Back</a></h2>
-        <p class="meta">
-		  <span class="tag" itemprop="genre">Encounters with Nature</span>
-          <span class="tag" itemprop="genre">Romantic Naturalism</span>
-        </p>
-        <p class="summary" itemprop="abstract">
-          Late nesting, early fledging, and fearless parenting.
-        </p>
-      </article>
-    </section>
+      <!-- YouTube video -->
+    </article>
+<!-- Responsive YouTube embed -->
+<div class="video">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/OcVVlFXg_H8?rel=0&modestbranding=1"
+    title="YouTube video player"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
     <footer>
       © <span id="year"></span> Irene Gabashvili. All rights reserved.
@@ -216,7 +116,6 @@
   </main>
 
   <script>
-    // Updates the year automatically.
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
