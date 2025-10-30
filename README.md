@@ -34,6 +34,7 @@ loader.io
 ### 
 
 + [WebSitePulse](https://www.websitepulse.com/) - to check whether specific components are properly operating
++ [UV](https://emily.space/posts/251023-uv)) - modern alternative for Python tooling
 + [cross browser testing](https://www.browserling.com/)
 + [Firefox developer tools](https://developer.mozilla.org/en-US/docs/Tools)  /// replaced [Firebug](https://getfirebug.com/)
 + [Chrome developer tools](https://developer.chrome.com/devtools)
