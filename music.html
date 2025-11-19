@@ -10,9 +10,9 @@
             text-align: center;
             margin: 20px;
         }
-        .podcast-container {
+        .podcast-container, .section {
             max-width: 600px;
-            margin: auto;
+            margin: 25px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -22,22 +22,74 @@
             width: 100%;
             margin-top: 10px;
         }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .video-grid img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .video-grid img:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Music Hub</h1>
-	
-<!-- Placeholder -->	
-	
-<div class="podcast-container">
-  <h2>Dreamers</h2>
-  <audio controls>
-    <source src="Podcasts/Dreamers.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+
+<h1>Welcome to Music Hub</h1>
+
+
+<!-- YOUTUBE CHANNEL -->
+<div class="section">
+    <h2>Music Videos</h2>
+    <p><a href="https://www.youtube.com/@irenegabashvili6133" target="_blank">Visit the YouTube Channel</a></p>
+
+    <!-- Optional sample thumbnails -->
+    <div class="video-grid">
+        <a href="https://youtu.be/yLveRYS_Q9E" target="_blank">
+            <img src="https://i9.ytimg.com/vi/yLveRYS_Q9E/mqdefault.jpg?sqp=CJzC9MgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgWygyMA8=&rs=AOn4CLAWSMwFnTy6UrdAl7FWpBvl3_aSGg" alt="Wake Up & Sing">
+        </a>
+        <a href="https://youtu.be/rEpIdr_pL3A" target="_blank">
+            <img src="https://i9.ytimg.com/vi/rEpIdr_pL3A/mqdefault.jpg?sqp=CMjE9MgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWyhPMA8=&rs=AOn4CLAIjzQ2p3qWI0OyVQ-8IgGigfXg4w" alt="Tea Ballad">
+        </a>
+        <a href="https://youtu.be/y2AJHQpSyGE?si=m3v1NKdtxI3T2XLp" target="_blank">
+            <img src="https://i9.ytimg.com/vi/y2AJHQpSyGE/mqdefault.jpg?sqp=CMjE9MgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDogSihyMA8=&rs=AOn4CLBA_R9fjwBMzMW3Esth9OBhVpv5Tg" alt="Neuro Lulaby">
+        </a>
+    </div>
 </div>
-	
-	
+
+
+<!-- STORIES / BLOG -->
+<div class="section">
+    <h2>Stories & Behind the Scenes</h2>
+    <p><a href="blog/stories.html">Read Stories</a></p>
+</div>
+
+
+<!-- PODCAST / MUSIC SAMPLE 
+<div class="podcast-container">
+    <h2>Opera sample</h2>
+    <audio controls>
+        <source src="Podcasts/Stars.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+-->
+
 
 </body>
 </html>
+
