@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kahite Vital Stats – Monthly Deaths (2019–2025)</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 20px; line-height: 1.35; }
+    h1 { margin: 0 0 10px; font-size: 22px; }
+    h2 { margin: 22px 0 10px; font-size: 18px; }
+    .wrap { max-width: 1100px; }
+    img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 14px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; }
+    th { background: #f5f5f5; text-align: center; }
+    td { text-align: right; }
+    td:first-child { text-align: left; font-weight: 600; }
+    .note { color: #555; font-size: 13px; margin-top: 8px; }
+    .pill { display:inline-block; padding: 2px 8px; border-radius: 999px; background:#eee; font-size:12px; margin-left:8px; }
+    .dementia-yes { background:#fff3cd; } /* light highlight */
+    .small { font-size: 12px; color:#666; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Kahite Monthly Deaths (2019–2025)</h1>
+
+    <img src="monthly1925.png" alt="Kahite deaths by month (2019–2025)" />
+
+    <div class="note">
+      Monthly table values are death counts per month.
+    </div>
+
+    <!-- Monthly counts table  -->
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+          <th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2019</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>5</td></tr>
+        <tr><td>2020</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>7</td></tr>
+        <tr><td>2021</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>7</td></tr>
+        <tr><td>2022</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td></tr>
+        <tr><td>2023</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>1</td><td>6</td><td>12</td></tr>
+        <tr><td>2024</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>2</td><td>0</td><td>1</td><td>0</td><td>1</td><td>7</td></tr>
+        <tr><td>2025</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td><td>8</td></tr>
+      </tbody>
+    </table>
+
+    <h2>
+      Individual Records
+      <span class="pill" id="dataStatus">loading…</span>
+    </h2>
+    <div class="small">If “Dementia diagnosis” is Yes, that row is lightly highlighted.</div>
+
+    <!-- This is where the CSV-loaded table will be rendered -->
+    <div id="recordsFromCsv"></div>
+
+    <!-- Fallback hard-coded HTML table if CSV can't be loaded -->
+    <div id="recordsFallback" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align:left;">ID</th>
+            <th>Moved out of Kahite at age</th>
+            <th>Age of death</th>
+            <th>Death Date</th>
+            <th style="text-align:center;">Dementia diagnosis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>HJ76</td><td>76</td><td>76</td><td>5/6/2019</td><td style="text-align:center;"></td></tr>
+          <tr><td>RR69</td><td>69</td><td>69</td><td>7/4/2019</td><td style="text-align:center;"></td></tr>
+          <tr><td>BB69</td><td>69</td><td>69</td><td>9/25/2019</td><td style="text-align:center;"></td></tr>
+          <tr><td>AJ68</td><td>68</td><td>68</td><td>12/17/2019</td><td style="text-align:center;"></td></tr>
+          <tr class="dementia-yes"><td>CC72</td><td>72</td><td>72</td><td>7/28/2019</td><td style="text-align:center;">Yes</td></tr>
+          <tr><td>BJ80</td><td>80</td><td>80</td><td>1/8/2020</td><td style="text-align:center;"></td></tr>
+          <tr><td>CT65</td><td>65</td><td>65</td><td>3/24/2020</td><td style="text-align:center;"></td></tr>
+          <tr><td>HM68</td><td>68</td><td>68</td><td>3/21/2020</td><td style="text-align:center;"></td></tr>
+          <tr><td>WT59</td><td>59</td><td>59</td><td>6/10/2020</td><td style="text-align:center;"></td></tr>
+          <tr class="dementia-yes"><td>RB76</td><td>75</td><td>76</td><td>6/23/2020</td><td style="text-align:center;">Yes</td></tr>
+          <tr><td>RB80</td><td>80</td><td>80</td><td>6/15/2020</td><td style="text-align:center;"></td></tr>
+          <tr><td>LM79</td><td>79</td><td>79</td><td>9/10/2020</td><td style="text-align:center;"></td></tr>
+          <tr><td>HL76</td><td>76</td><td>76</td><td>5/2/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>HD73</td><td>73</td><td>73</td><td>6/25/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>FW97</td><td>97</td><td>97</td><td>6/4/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>MB85</td><td>85</td><td>85</td><td>7/11/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>EM98</td><td>98</td><td>98</td><td>9/7/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>HG65</td><td>65</td><td>65</td><td>10/28/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>FD92</td><td>92</td><td>92</td><td>12/17/2021</td><td style="text-align:center;"></td></tr>
+          <tr><td>OR79</td><td>79</td><td>79</td><td>1/14/2022</td><td style="text-align:center;"></td></tr>
+          <tr><td>WL75</td><td>75</td><td>75</td><td>5/8/2022</td><td style="text-align:center;"></td></tr>
+          <tr><td>WS76</td><td>76</td><td>76</td><td>6/2/2022</td><td style="text-align:center;"></td></tr>
+          <tr><td>GB81</td><td>81</td><td>81</td><td>6/21/2022</td><td style="text-align:center;"></td></tr>
+          <tr class="dementia-yes"><td>CJ81</td><td>81</td><td>81</td><td>2/8/2023</td><td style="text-align:center;">Yes</td></tr>
+          <tr><td>RW86</td><td>86</td><td>86</td><td>8/11/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>JJ71</td><td>71</td><td>71</td><td>9/28/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>WE70</td><td>70</td><td>70</td><td>10/5/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>TD73</td><td>73</td><td>73</td><td>10/21/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>FK77</td><td>77</td><td>77</td><td>11/22/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>CB81</td><td>81</td><td>81</td><td>12/1/2023</td><td style="text-align:center;"></td></tr>
+          <tr class="dementia-yes"><td>CR82</td><td>82</td><td>82</td><td>12/2/2023</td><td style="text-align:center;">Yes</td></tr>
+          <tr><td>LP84</td><td>84</td><td>84</td><td>12/8/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>SB78</td><td>78</td><td>78</td><td>12/26/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>GK83</td><td>83</td><td>83</td><td>12/26/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>KB71</td><td>71</td><td>71</td><td>12/27/2023</td><td style="text-align:center;"></td></tr>
+          <tr><td>WB72</td><td>72</td><td>72</td><td>4/27/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>MR84</td><td>84</td><td>84</td><td>5/27/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>OC78</td><td>78</td><td>78</td><td>7/18/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>LC84</td><td>84</td><td>84</td><td>8/10/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>AJ89</td><td>89</td><td>89</td><td>8/13/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>SJ79</td><td>79</td><td>79</td><td>10/7/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>WG85</td><td>85</td><td>85</td><td>12/1/2024</td><td style="text-align:center;"></td></tr>
+          <tr><td>BN86</td><td>84</td><td>86</td><td>5/30/2025</td><td style="text-align:center;"></td></tr>
+          <tr><td>MK74</td><td>74</td><td>74</td><td>8/8/2025</td><td style="text-align:center;"></td></tr>
+          <tr class="dementia-yes"><td>PH84</td><td>84</td><td>84</td><td>8/21/2025</td><td style="text-align:center;">Yes</td></tr>
+          <tr class="dementia-yes"><td>SK78</td><td>78</td><td>78</td><td>8/21/2025</td><td style="text-align:center;">Yes</td></tr>
+          <tr><td>RM84</td><td>84</td><td>84</td><td>8/23/2025</td><td style="text-align:center;"></td></tr>
+          <tr><td>RJ77</td><td>77</td><td>77</td><td>10/12/2025</td><td style="text-align:center;"></td></tr>
+          <tr><td>RD86</td><td>86</td><td>86</td><td>11/15/2025</td><td style="text-align:center;"></td></tr>
+          <tr><td>HB90</td><td>84</td><td>90</td><td>12/13/2025</td><td style="text-align:center;"></td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        Showing hard-coded fallback table (CSV could not be loaded).
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Minimal CSV parser (handles commas, no quoted-commas)
+    function parseCsv(text) {
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(",").map(s => s.trim());
+      const rows = lines.slice(1).map(line => {
+        const cols = line.split(","); // ok for your simple CSV
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = (cols[i] ?? "").trim());
+        return obj;
+      });
+      return { headers, rows };
+    }
+
+    function renderTable(headers, rows) {
+      const div = document.getElementById("recordsFromCsv");
+      const table = document.createElement("table");
+
+      const thead = document.createElement("thead");
+      const trh = document.createElement("tr");
+      headers.forEach((h, idx) => {
+        const th = document.createElement("th");
+        th.textContent = h;
+        if (idx === 0) th.style.textAlign = "left";
+        if (h.toLowerCase().includes("dementia")) th.style.textAlign = "center";
+        trh.appendChild(th);
+      });
+      thead.appendChild(trh);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        const dementiaVal = (r["Dementia diagnosis"] || "").toLowerCase();
+        if (dementiaVal === "yes") tr.classList.add("dementia-yes");
+
+        headers.forEach((h, idx) => {
+          const td = document.createElement("td");
+          td.textContent = r[h] || "";
+          if (idx === 0) td.style.textAlign = "left";
+          if (h.toLowerCase().includes("dementia")) td.style.textAlign = "center";
+          else td.style.textAlign = "right";
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+
+      div.innerHTML = "";
+      div.appendChild(table);
+    }
+
+    async function loadCsv() {
+      const status = document.getElementById("dataStatus");
+      try {
+        const res = await fetch("deaths.csv", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = await res.text();
+        const { headers, rows } = parseCsv(text);
+        renderTable(headers, rows);
+        status.textContent = "loaded from deaths.csv";
+      } catch (e) {
+        // show fallback hard-coded table
+        document.getElementById("recordsFallback").style.display = "block";
+        status.textContent = "using fallback table";
+      }
+    }
+
+    loadCsv();
+  </script>
+</body>
+</html>
+
