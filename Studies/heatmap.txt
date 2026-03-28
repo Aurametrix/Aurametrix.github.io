@@ -1,0 +1,145 @@
+# Create a year x month heatmap with Poisson significance overlay
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from math import exp, factorial
+
+# Data from user's table
+data = {
+    2019:[0,0,0,0,1,0,2,0,1,0,0,1],
+    2020:[1,0,2,0,0,3,0,0,1,0,0,0],
+    2021:[0,0,0,0,1,2,1,0,1,1,0,1],
+    2022:[1,0,0,0,1,2,0,0,0,0,0,0],
+    2023:[0,1,0,0,0,0,0,1,1,2,1,6],
+    2024:[0,0,0,1,1,0,1,2,0,1,0,1],
+    2025:[0,0,0,0,1,0,0,4,0,1,1,1],
+    2026:[4,1,2,None,None,None,None,None,None,None,None,None]
+}
+
+months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+df = pd.DataFrame(data, index=months).T
+
+# Flatten to compute lambda including zeros but excluding N/A
+values = df.values.flatten()
+values = values[~pd.isna(values)]
+lam = values.mean()
+
+# Poisson upper-tail test
+def poisson_upper_tail_p(k, lam):
+    cdf = 0.0
+    for i in range(int(k)):
+        cdf += exp(-lam) * (lam ** i) / factorial(i)
+    return max(0.0,1.0-cdf)
+
+pvals = df.copy()
+sig = df.copy()
+
+for y in df.index:
+    for m in df.columns:
+        v = df.loc[y,m]
+        if pd.isna(v):
+            pvals.loc[y,m] = np.nan
+            sig.loc[y,m] = False
+        else:
+            p = poisson_upper_tail_p(v, lam)
+            pvals.loc[y,m] = p
+            sig.loc[y,m] = p < 0.05
+
+# Plot heatmap
+fig, ax = plt.subplots(figsize=(12,6))
+
+im = ax.imshow(df.fillna(0), aspect="auto")
+
+ax.set_xticks(range(len(months)))
+ax.set_xticklabels(months)
+
+ax.set_yticks(range(len(df.index)))
+ax.set_yticklabels(df.index)
+
+ax.set_title("Monthly Deaths Heatmap (2019–2026) with Poisson Significance")
+
+# Annotate cells
+for i in range(df.shape[0]):
+    for j in range(df.shape[1]):
+        v = df.iloc[i,j]
+        if pd.isna(v):
+            text = ""
+        else:
+            text = str(int(v))
+        ax.text(j, i, text, ha="center", va="center", color="white")
+
+# Add hatch overlay for significant cells
+for i in range(df.shape[0]):
+    for j in range(df.shape[1]):
+        if sig.iloc[i,j] == True:
+            ax.add_patch(
+                plt.Rectangle((j-0.5,i-0.5),1,1, fill=False, hatch="///", edgecolor="black", linewidth=0)
+            )
+
+cbar = plt.colorbar(im)
+cbar.set_label("Deaths")
+
+plt.tight_layout()
+
+path = "/mnt/data/deaths_heatmap_poisson.png"
+plt.savefig(path, dpi=200)
+
+print("Heatmap saved to:", path)
+print("Overall lambda:", lam)
+
+# list significant months
+significant_cells = []
+for y in df.index:
+    for m in df.columns:
+        if sig.loc[y,m] == True:
+            significant_cells.append((y,m,df.loc[y,m],pvals.loc[y,m]))
+
+print("\nSignificant months (p<0.05):")
+for row in significant_cells:
+    print(row)
+
+#####====
+
+records = []
+for year,vals in data.items():
+    for m,v in zip(months,vals):
+        if v is None:
+            continue
+        records.append({"Year":year,"Month":m,"Deaths":v})
+df = pd.DataFrame(records)
+
+# Create Year-Month label
+df["YearMonth"] = df["Year"].astype(str) + "-" + df["Month"]
+
+# Poisson baseline lambda (include zero months)
+lam = df["Deaths"].mean()
+
+# Poisson upper tail p-value
+def poisson_upper_tail_p(k, lam):
+    cdf = 0.0
+    for i in range(k):
+        cdf += exp(-lam) * (lam ** i) / factorial(i)
+    return max(0.0,1.0-cdf)
+
+df["p_value"] = df["Deaths"].apply(lambda k: poisson_upper_tail_p(k, lam))
+df["significant"] = df["p_value"] < 0.05
+
+# Plot
+fig, ax = plt.subplots(figsize=(12,6))
+
+bars = ax.bar(range(len(df)), df["Deaths"])
+
+for bar, sig in zip(bars, df["significant"]):
+    if sig:
+        bar.set_hatch("///")
+
+ax.axhline(lam, linestyle="--", label=f"Overall monthly average = {lam:.2f}")
+
+ax.set_xticks(range(len(df)))
+ax.set_xticklabels(df["YearMonth"], rotation=45)
+ax.set_xlabel("Month")
+ax.set_ylabel("Deaths")
+ax.set_title("Monthly Deaths (2019–2026) with Poisson Upper-Tail Test")
+ax.legend()
