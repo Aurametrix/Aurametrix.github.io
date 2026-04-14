@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kahite Storycrafters | May 16 Event</title>
+  <style>
+    :root {
+      --bg1: #fff7ed;
+      --bg2: #fdf2f8;
+      --bg3: #eef2ff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --card: rgba(255,255,255,0.82);
+      --border: rgba(255,255,255,0.55);
+      --shadow: 0 18px 50px rgba(31, 41, 55, 0.12);
+      --accent1: #ef4444;
+      --accent2: #f59e0b;
+      --accent3: #10b981;
+      --accent4: #3b82f6;
+      --accent5: #8b5cf6;
+      --accent6: #ec4899;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        
+		radial-gradient(circle at top left, rgba(251, 191, 36, 0.28), transparent 30%),
+        radial-gradient(circle at top right, rgba(236, 72, 153, 0.22), transparent 32%),
+		
+		
+        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.18), transparent 34%),
+        linear-gradient(135deg, var(--bg1), var(--bg2) 40%, var(--bg3));
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+	
+	
+
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 36px;
+      border-radius: 28px;
+      background:
+		url('KSlogo.jpg') center right 40px / 160px no-repeat,
+		linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,255,255,0.68));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+	
+
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(8px);
+      opacity: 0.75;
+    }
+
+    .hero::before {
+      width: 240px;
+      height: 240px;
+      top: -80px;
+      right: -60px;
+      background: radial-gradient(circle, rgba(59,130,246,0.24), rgba(139,92,246,0));
+    }
+
+    .hero::after {
+      width: 260px;
+      height: 260px;
+      bottom: -120px;
+      left: -80px;
+      background: radial-gradient(circle, rgba(245,158,11,0.22), rgba(239,68,68,0));
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent6), var(--accent2));
+      color: white;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: #374151;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .meta-card {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .meta-value {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      margin-top: -4px;
+      color: #4b5563;
+      max-width: 820px;
+    }
+
+    .highlight {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .spotlight, .video-box {
+      border-radius: 24px;
+      padding: 22px;
+      min-height: 100%;
+    }
+
+    .spotlight {
+      background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(236,72,153,0.1));
+      border: 1px solid rgba(99,102,241,0.14);
+    }
+
+    .video-box {
+      background: linear-gradient(135deg, rgba(16,185,129,0.14), rgba(59,130,246,0.12));
+      border: 1px solid rgba(16,185,129,0.16);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 14px;
+    }
+
+    .badge {
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: white;
+      border: 1px solid rgba(255,255,255,0.75);
+      color: #374151;
+    }
+
+    .schedule {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.75);
+    }
+
+    .time {
+      font-weight: 800;
+      color: #7c3aed;
+      font-size: 0.95rem;
+    }
+
+    .presenters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72));
+      border: 1px solid rgba(255,255,255,0.78);
+      box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30px -30px auto;
+      width: 110px;
+      height: 110px;
+      background: radial-gradient(circle, rgba(59,130,246,0.13), transparent 65%);
+      border-radius: 999px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.96rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 14px;
+    }
+
+    .tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: white;
+    }
+
+    .t1 { background: linear-gradient(90deg, #ef4444, #f97316); }
+    .t2 { background: linear-gradient(90deg, #f59e0b, #eab308); }
+    .t3 { background: linear-gradient(90deg, #10b981, #14b8a6); }
+    .t4 { background: linear-gradient(90deg, #3b82f6, #06b6d4); }
+    .t5 { background: linear-gradient(90deg, #8b5cf6, #6366f1); }
+    .t6 { background: linear-gradient(90deg, #ec4899, #d946ef); }
+
+    .footer-note {
+      margin-top: 22px;
+      font-size: 0.94rem;
+      color: #4b5563;
+      background: rgba(255,255,255,0.66);
+      border: 1px solid rgba(255,255,255,0.74);
+      padding: 16px 18px;
+      border-radius: 18px;
+    }
+
+    .cta {
+      margin-top: 18px;
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent4), var(--accent5));
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
+    }
+
+    @media (max-width: 860px) {
+      .highlight {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 30px 22px;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      .schedule-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="eyebrow">LifeTime Learning • Kahite Storycrafters</div>
+      <h1>Kahite Storycrafters Event</h1>
+      <p>
+        An afternoon of imagination, memoir, humor, history, and visual storytelling. 
+		Join us on <strong>May 16</strong> for live presentations from local writers and creators, 
+		plus a large-screen video showcase.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <div class="meta-label">Date</div>
+          <div class="meta-value">May 16</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Attendee Arrival</div>
+          <div class="meta-value">2:45 PM</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Program Begins</div>
+          <div class="meta-value">3:00 PM</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Format</div>
+          <div class="meta-value">Live readings, video, Q&amp;A</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Featured Program</h2>
+      <p class="section-intro">
+        The event opens with a welcome and an introduction to Kahite Storycrafters, followed by six featured presentations, 
+		video feature, audience Q&amp;A, and time afterward to visit with authors at their tables.
+      </p>
+
+      <div class="highlight">
+        <div class="spotlight">
+          <h3 style="margin-top:0; font-size:1.35rem;">A creative afternoon across genres</h3>
+          <div class="badge-row">
+            <span class="badge">Fantasy</span>
+            <span class="badge">Memoir</span>
+            <span class="badge">Humor</span>
+            <span class="badge">History</span>
+            <span class="badge">Science &amp; Story</span>
+            <span class="badge">Illustration</span>
+          </div>
+          <p>
+            From woodland wonder and historical storytelling to dog tales, family reflections, autobiographical journeys, and scientific imagination, this program brings together a richly varied group of voices.
+          </p>
+        </div>
+
+        <div class="video-box">
+          <div class="eyebrow" style="margin-bottom:12px; background: linear-gradient(90deg, #10b981, #3b82f6);">Special Feature</div>
+          <h3 style="margin:0 0 10px; font-size:1.35rem;">Stories on the Big Screen</h3>
+          <p style="margin:0; color:#374151;">
+		  Some pieces will be presented in video format, 
+		  highlighting 
+		  <strong>cinematic musical storytelling</strong> on the big screen.
+		
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Event Schedule</h2>
+      <div class="schedule">
+        <div class="schedule-item"><div class="time">Before 2:45</div><div>Tables, chairs, and audio-visual setup.</div></div>
+        <div class="schedule-item"><div class="time">2:45</div><div>Author table engagement with arriving attendees.</div></div>
+        <div class="schedule-item"><div class="time">3:00</div><div><strong>Guy Calkins</strong>: Welcome and introduction to the Kahite Storycrafters as part of the LifeTime Learning program.</div></div>
+        <div class="schedule-item"><div class="time">3:05</div><div><strong>Brian Mulliner</strong>: Introduction to Kahite Storycrafters, membership, initiatives, calendar, today’s presenters, and post-program activities.</div></div>
+        <div class="schedule-item"><div class="time">3:20–4:10</div><div>Six Storycrafter presentations. Each presenter shares a brief personal introduction followed by a 7–8 minute story rendition.</div></div>
+        <div class="schedule-item"><div class="time">4:20</div><div><strong>Video presentation</strong> 
+on the big screen.</div></div>
+        <div class="schedule-item"><div class="time">4:30</div><div><strong>Brian Mulliner</strong> leads audience Q&amp;A with the members seated at the front tables.</div></div>
+        <div class="schedule-item"><div class="time">4:50</div><div>Post-program author table engagement with remaining attendees.</div></div>
+        <div class="schedule-item"><div class="time">After 5:10</div><div>Take down tables, chairs, and audio-visual equipment.</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Meet the Storycrafters</h2>
+      <p class="section-intro">
+        Explore the featured writers and creators presenting themes of wonder, memory, humor, heritage, and discovery.
+      </p>
+
+      <div class="presenters">
+        <article class="card">
+          <h3>Brian Mulliner</h3>
+          <div class="tag-list">
+            <span class="tag t1">Fantasy</span>
+            <span class="tag t2">Nature &amp; Magic</span>
+            <span class="tag t5">Historical Fiction</span>
+          </div>
+          <p>
+            Brian’s writing blends woodland lore, wonder, and friendship, often through a child’s eyes. His stories bring together folklore, empathy, and a vivid sense of place.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Ralph Mobley</h3>
+          <div class="tag-list">
+            <span class="tag t2">Humor</span>
+            <span class="tag t3">Pet Stories</span>
+            <span class="tag t6">Memoir</span>
+          </div>
+          <p>
+            Ralph brings a warm, conversational voice to everyday life, turning porch talk, muddy paws, and ordinary moments into stories full of heart and laughter.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Nelson Ledbetter</h3>
+          <div class="tag-list">
+            <span class="tag t4">Autobiography</span>
+            <span class="tag t2">Travel &amp; Work Life</span>
+            <span class="tag t6">Memoir</span>
+          </div>
+          <p>
+            Nelson writes with humor and heart about life on the move, from 1950s childhood memories to highways, worksites, and the stories gathered along the way.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Maxine Fischer</h3>
+          <div class="tag-list">
+            <span class="tag t1">Fantasy</span>
+            <span class="tag t5">Illustrated Books</span>
+            <span class="tag t2">Fairy Tales</span>
+          </div>
+          <p>
+            Both author and illustrator, Maxine creates immersive fantasy worlds for young readers and is now expanding her imaginative universe into a new fantasy novel.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Irene Gabashvili</h3>
+          <div class="tag-list">
+            <span class="tag t3">Health Tech</span>
+            <span class="tag t4">Science</span>
+            <span class="tag t6">Stories &amp; Songs</span>
+          </div>
+          <p>
+            Irene bridges scientific curiosity and storytelling, weaving together physics, biology, health technology, lyrical naturalism, and science fiction.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Ron Nelson</h3>
+          <div class="tag-list">
+            <span class="tag t6">Memoir</span>
+            <span class="tag t2">Family</span>
+            <span class="tag t3">Reflections</span>
+          </div>
+          <p>
+            Ron’s memoir work explores formative moments that shaped his understanding of family, memory, and perspective, following trails both literal and emotional.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Gary Mulliner</h3>
+          <div class="tag-list">
+            <span class="tag t5">History</span>
+            <span class="tag t3">Trails &amp; Kiosks</span>
+            <span class="tag t4">Nonfiction</span>
+          </div>
+          <p>
+            Gary preserves local history through research, trail work, and storytelling. His writing honors the people and places that shaped the region and its evolving landscape.
+          </p>
+        </article>
+      </div>
+
+      <div class="footer-note">
+        <strong>Program note:</strong> Author table engagement begins before the program and continues after the presentations and Q&amp;A, giving attendees an opportunity to meet the Storycrafters and learn more about their work.
+      </div>
+    </section>
+  </div>
+</body>
+</html>
