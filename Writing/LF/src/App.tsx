@@ -206,10 +206,21 @@ function PersonFile({ person, onStoryLink }: { person: Person; onStoryLink: () =
 
   return (
     <div className="file-content">
-      <p className="file-eyebrow">PERSONNEL FILE / {String(people.indexOf(person) + 1).padStart(2, "0")}</p>
-      {person.status && <p className="file-victim">{person.status}</p>}
-      <h2 id="dialog-title" className="file-title">{person.name}</h2>
-      <p className="file-role">{person.role}</p>
+<p className="file-eyebrow">
+  PERSONNEL FILE / {String(people.indexOf(person) + 1).padStart(2, "0")}
+</p>
+
+{person.image && (
+  <img
+    src={person.image}
+    alt={person.name}
+    className="file-image"
+  />
+)}
+
+{person.status && <p className="file-victim">{person.status}</p>}
+<h2 id="dialog-title" className="file-title">{person.name}</h2>
+<p className="file-role">{person.role}</p>
 
       <div className="file-facts">
         <div>
@@ -508,7 +519,7 @@ export default function App() {
                 <p>
                   In the aisles: <a href="#profile-dorothy-jones" onClick={() => { returnHashRef.current = "#seat-map"; }}>Dorothy Jones</a> serves D-F;
                   {" "}<a href="#profile-candy-lebowitz" onClick={() => { returnHashRef.current = "#seat-map"; }}>Candy Lebowitz</a> serves J-L.
-                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 12A.
+                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 17A.
                 </p>
                 <a href="https://www.united.com/en/us/fly/company/aircraft/boeing-787-9-dreamliner.html#version-2" target="_blank" rel="noopener noreferrer">
                   Cabin layout reference <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" />

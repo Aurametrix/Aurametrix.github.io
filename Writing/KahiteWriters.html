@@ -157,6 +157,56 @@
       padding: 12px 14px;
     }
 
+    .featured-project {
+      max-width: 820px;
+      margin: 22px auto 4px;
+      padding: 22px 24px;
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(167,243,208,.10), rgba(252,211,77,.08));
+      border: 1px solid rgba(167,243,208,.28);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 32px rgba(0,0,0,.22);
+    }
+
+    .featured-label {
+      display: inline-block;
+      margin-bottom: 7px;
+      color: var(--accent-2);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .featured-project h2 {
+      margin: 0 0 6px;
+      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+      color: var(--accent);
+    }
+
+    .featured-project p {
+      max-width: 650px;
+      margin: 0 auto 16px;
+      color: var(--text);
+      font-size: .98rem;
+    }
+
+    .featured-project-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #0b1324;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), #7dd3fc);
+      padding: 10px 17px;
+      border-radius: 10px;
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .featured-project-link:hover {
+      transform: translateY(-1px);
+      filter: saturate(110%);
+    }
+
   </style>
 
   <!-- Simple schema.org metadata for each author -->
@@ -206,9 +256,17 @@
   <a class="hero-link primary" href="051626.html">Explore the May 16 Event →</a>
   <a class="hero-link" href="https://www.youtube.com/playlist?list=PLRRLQyyAWgB5eSrxQcGubruqHpSeRM0WL" target="_blank" rel="noopener">Watch recap videos →</a>
 </div>
-<div class="feature-note" style="margin-top: 16px;">
-  <strong>Now featured:</strong> our May 16 Storycrafters event page with program details and highlights.
-</div>
+<section class="featured-project" aria-labelledby="featured-project-title">
+  <div class="featured-label">NOW FEATURED</div>
+  <h2 id="featured-project-title">Collaborative Murder Mystery</h2>
+  <p>
+    A community-created murder mystery developed collaboratively by Kahite writers.
+    Follow the story, characters, clues, and evolving mystery.
+  </p>
+  <a class="featured-project-link" href="LF/" aria-label="Explore the Collaborative Murder Mystery">
+    Explore the mystery →
+  </a>
+</section>
 
 
       <div class="toolbar" id="topic-toolbar" aria-label="Popular topics"></div>
@@ -254,7 +312,7 @@
 
           <nav class="links" aria-label="Brian's works and links">
 		              <a href="https://www.amazon.com/stores/author/B0DR9GTWNR/about" target="_blank" rel="noopener noreferrer">Bio</a>
-		  
+
             <a href="https://www.amazon.com/dp/B0FWZGKVRJ " target="_blank" rel="noopener noreferrer">The Enchanted Forest</a>
             <a href="https://www.amazon.com/dp/B0FVV9JG8Z" target="_blank" rel="noopener noreferrer">The Waters of Awakening</a>
           </nav>
@@ -281,7 +339,7 @@
             those anecdotes into a larger life story.
           </p>
 
-          <nav class="links" aria-label="Ralph's works and links">
+          <nav class="links" aria-label="Maxine's works and links">
             <a href="https://substack.com/@ralphmobley?" target="_blank" rel="noopener noreferrer">Writer Page</a>
             <a href="https://dogtags.substack.com" target="_blank" rel="noopener noreferrer">Southern Dog</a>
             <a href="" target="_blank" rel="noopener noreferrer">Memoir Updates</a>
@@ -302,9 +360,9 @@
             <span class="badge">Memoir</span>
           </div>
 
-          <p class="body">            
-		 
-Nelson’s first memoir, Events from My Past That I Think I Remember Clearly, revisited his 1950s childhood, Purdue days, and years at AT&T. His new project, 
+          <p class="body">
+
+Nelson’s first memoir, Events from My Past That I Think I Remember Clearly, revisited his 1950s childhood, Purdue days, and years at AT&T. His new project,
 Where Has Nelson Been?, widens the view - a full autobiographical journey told with humor and heart.
 
           </p>
@@ -316,14 +374,14 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
           </nav>
         </div>
       </article>
-	  
-	  
-	  
+
+
+
 	     <!-- Maxine Fischer -->
-      <article class="card" role="listitem" aria-labelledby="Maxine-name">
+      <article class="card" role="listitem" aria-labelledby="maxine-name">
         <img class="avatar" src="MF.png" alt="MF" />
         <div class="meta">
-          <h2 id="ralph-name">Maxine Fischer</h2>
+          <h2 id="maxine-name">Maxine Fischer</h2>
           <p class="tagline">Imagination-led fantasy brought to life through story and illustration.</p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -333,27 +391,27 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
           </div>
 
           <p class="body">
-            Maxine is both author and illustrator, crafting immersive fantasy worlds. 
-			She wrote and illustrated two children’s books. Maxine is currently working on a new fantasy novel, 
+            Maxine is both author and illustrator, crafting immersive fantasy worlds.
+			She wrote and illustrated two children’s books. Maxine is currently working on a new fantasy novel,
 			expanding her imaginative universe for an older audience while retaining the wonder that defines her work.
           </p>
 
-          <nav class="links" aria-label="Ralph's works and links">
+          <nav class="links" aria-label="Maxine's works and links">
             <a href="TheForgottenPrincess.jpg" target="_blank" rel="noopener noreferrer">The Forgotten Princess</a>
             <a href="Andthedragon.jpg" target="_blank" rel="noopener noreferrer">Jack and the Dragon</a>
 
           </nav>
         </div>
       </article>
-	  
 
-	  
-	  
+
+
+
 
 
       <!-- Leta Gail Doerr -->
       <article class="card" role="listitem" aria-labelledby="leta-name">
- 
+
         <img class="avatar" src="https://m.media-amazon.com/images/I/41FFThQ1UFL._SX250_CR0%2C0%2C250%2C250_.jpg" alt="BM avatar" />
          <div class="meta">
           <h2 id="leta-name">Leta Gail Doerr</h2>
@@ -411,12 +469,12 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
           </nav>
         </div>
       </article>
-	  
+
 	  	  	     <!-- Gary Mulliner -->
-      <article class="card" role="listitem" aria-labelledby="Gary-name">
+      <article class="card" role="listitem" aria-labelledby="gary-name">
         <img class="avatar" src="GM.png" alt="GM" />
         <div class="meta">
-          <h2 id="ralph-name">Gary Mulliner</h2>
+          <h2 id="gary-name">Gary Mulliner</h2>
           <p class="tagline">Preserving the past through trails, tales, and tireless research.</p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -426,10 +484,10 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
           </div>
 
           <p class="body">
-           Gary Mulliner’s Four Mile, Kahite and Beyond, 
-		   A Tapestry of Tales honors the Native Americans, pioneers, 
-		   and farmers who shaped the land. With a volunteer “chain gang,” 
-		   he has built and maintained 20+ miles of trails and historical kiosks, 
+           Gary Mulliner’s Four Mile, Kahite and Beyond,
+		   A Tapestry of Tales honors the Native Americans, pioneers,
+		   and farmers who shaped the land. With a volunteer “chain gang,”
+		   he has built and maintained 20+ miles of trails and historical kiosks,
 		   and he is now writing about the history of the Tellico Dam.     </p>
 
           <nav class="links" aria-label="Gary's works and links">
@@ -439,13 +497,13 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
           </nav>
         </div>
       </article>
-	  
-	  
+
+
 	  	  	  	  	     <!-- Ron Nelson -->
-      <article class="card" role="listitem" aria-labelledby="Gary-name">
+      <article class="card" role="listitem" aria-labelledby="gary-name">
         <img class="avatar" src="RonNelson.jpg" alt="RN" />
         <div class="meta">
-          <h2 id="ralph-name">Ron Nelson</h2>
+          <h2 id="ron-name">Ron Nelson</h2>
           <p class="tagline">Following winding trails and the lessons hidden along the way. </p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -454,28 +512,28 @@ Where Has Nelson Been?, widens the view - a full autobiographical journey told w
 
           </div>
 	          <p class="body">
-Ron is turning to memoir to explore moments that shaped his understanding of family and perspective. 
-His first story revisits a childhood hike along a river with a name as unforgettable 
-as the experience itself - a day that gently reshaped how he saw his father and himself. 
+Ron is turning to memoir to explore moments that shaped his understanding of family and perspective.
+His first story revisits a childhood hike along a river with a name as unforgettable
+as the experience itself - a day that gently reshaped how he saw his father and himself.
 
- 
+
  </p>
           <nav class="links" aria-label="Ron's works and links">
-		              <a href="https://substack.com/@ronaldnelson757567" target="_blank" rel="noopener noreferrer">The Umbral Glass</a> 
-            <a href="" target="_blank" rel="noopener noreferrer">Updates</a> 
+		              <a href="https://substack.com/@ronaldnelson757567" target="_blank" rel="noopener noreferrer">The Umbral Glass</a>
+            <a href="" target="_blank" rel="noopener noreferrer">Updates</a>
 
           </nav>
         </div>
-      </article>    
-	  
-	  
+      </article>
+
+
 	      <!-- Wendy Campbell -->
-      <article class="card" role="listitem" aria-labelledby="chris-name">
+      <article class="card" role="listitem" aria-labelledby="wendy-name">
         <img class="avatar" src="
 		W.jpeg
 		" alt="Wendy avatar" />
         <div class="meta">
-          <h2 id="chris-name">Wendy Campbell</h2>
+          <h2 id="wendy-name">Wendy Campbell</h2>
           <p class="tagline">Discovering family stories worth telling, one memory at a time.</p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -485,22 +543,22 @@ as the experience itself - a day that gently reshaped how he saw his father and 
           </div>
 
           <p class="body">
-         
-		 The daughter of an author and English professor, 
-		 Wendy grew up surrounded by books, language, and a love of storytelling. 
-		 Drawn to short stories rooted in family experiences and real-life adventures, 
+
+		 The daughter of an author and English professor,
+		 Wendy grew up surrounded by books, language, and a love of storytelling.
+		 Drawn to short stories rooted in family experiences and real-life adventures,
 		 she is discovering where her own path as a writer will lead.
           </p>
 
           <nav class="links" aria-label="Wendy's works and links">
-            <a href="" target="_blank" rel="noopener noreferrer">Updates</a> 
-   
+            <a href="" target="_blank" rel="noopener noreferrer">Updates</a>
+
  </nav>
         </div>
       </article>
-	  
-	  
-	  
+
+
+
 
       <!-- Chris Allsup -->
       <article class="card" role="listitem" aria-labelledby="chris-name">
@@ -529,17 +587,17 @@ as the experience itself - a day that gently reshaped how he saw his father and 
             <a href="https://arxiv.org/abs/2502.09877" target="_blank" rel="noopener noreferrer">Parking</a>
             <a href="https://arxiv.org/abs/2410.04676" target="_blank" rel="noopener noreferrer">Strategizer</a>
            <a href="https://youtu.be/-TPyRW4bIwg" target="_blank" rel="noopener noreferrer">Songs</a>
-  
+
  </nav>
         </div>
       </article>
-	  
+
 
 	  	  	     <!-- Ken Thoreson -->
-      <article class="card" role="listitem" aria-labelledby="Ken-name">
+      <article class="card" role="listitem" aria-labelledby="ken-name">
         <img class="avatar" src="KT.png" alt="KT" />
         <div class="meta">
-          <h2 id="ralph-name">Ken Thoreson</h2>
+          <h2 id="ken-name">Ken Thoreson</h2>
           <p class="tagline">Practical leadership insights for building high-performance sales teams.</p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -549,9 +607,9 @@ as the experience itself - a day that gently reshaped how he saw his father and 
           </div>
 
           <p class="body">
-  Ken Thoreson is a sales leadership author focused on the real-world challenges 
-  of managing and motivating teams.  
-  Known for clear, actionable guidance, Ken’s books distill decades of sales experience into 
+  Ken Thoreson is a sales leadership author focused on the real-world challenges
+  of managing and motivating teams.
+  Known for clear, actionable guidance, Ken’s books distill decades of sales experience into
   tools leaders can use immediately to build stronger, more effective organizations.         </p>
 
           <nav class="links" aria-label="Ken's works and links">
@@ -561,15 +619,15 @@ as the experience itself - a day that gently reshaped how he saw his father and 
           </nav>
         </div>
       </article>
-	  
 
-	  
-	  
+
+
+
 	  	  	  	  	     <!-- Wayne Marler -->
-      <article class="card" role="listitem" aria-labelledby="Gary-name">
+      <article class="card" role="listitem" aria-labelledby="gary-name">
         <img class="avatar" src="WM.jpg" alt="WM" />
         <div class="meta">
-          <h2 id="ralph-name">Wayne Marler</h2>
+          <h2 id="wayne-name">Wayne Marler</h2>
           <p class="tagline">Faith-rooted songs shaped by memory, testimony, and personal conviction </p>
 
           <div class="badges" aria-label="Genres & styles">
@@ -578,23 +636,23 @@ as the experience itself - a day that gently reshaped how he saw his father and 
 
           </div>
 	          <p class="body">
-          Wayne is a songwriter who tells stories through music. A Kahite resident and retired minister, he writes, sings, and arranges every piece on his YouTube channel, often drawing from faith, loss, and life experience. His songs carry the tone of lived testimony rather than performance, 
+          Wayne is a songwriter who tells stories through music. A Kahite resident and retired minister, he writes, sings, and arranges every piece on his YouTube channel, often drawing from faith, loss, and life experience. His songs carry the tone of lived testimony rather than performance,
 		  created simply because he feels called to share them.  </p>
 
           <nav class="links" aria-label="Wayne's works and links">
             <a href="https://www.youtube.com/@OPEN_DOOR711" target="_blank" rel="noopener noreferrer">Youtube</a>
             <a href="https://x.com/Marlerw1Marlerw" target="_blank" rel="noopener noreferrer">X</a>
 			            <a href="https://rumble.com/user/TOQUATV" target="_blank" rel="noopener noreferrer">Rumble</a>
-			
-			
+
+
 
           </nav>
         </div>
-      </article>  
-	  
-	  
-	  
-	  
+      </article>
+
+
+
+
     </main>
 
     <footer>

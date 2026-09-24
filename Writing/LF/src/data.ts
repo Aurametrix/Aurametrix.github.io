@@ -9,7 +9,10 @@ export type Person = {
   description: string;
   question: string;
   location?: string;
+  image?: string;
 };
+
+
 
 export type Story = {
   id: string;
@@ -23,7 +26,7 @@ export const people: Person[] = [
   {
     id: "harold-vale",
     name: "Harold Adrian Vale",
-    seat: "12A",
+    seat: "17A",
     kind: "passenger",
     role: "Venture capitalist",
     teaser: "A tech investor questioning the Dulles disruption.",
@@ -81,7 +84,6 @@ export const people: Person[] = [
     seat: "21J",
     kind: "passenger",
     role: "Traveler",
-    status: "Victim 02",
     teaser: "Traveling under another name to reach his family.",
     description:
       "Omar Faizan is a Middle Eastern man traveling under an assumed identity to reunite with family after entering the United States without authorization. He appears unaware of the intelligence interest surrounding him. He is the second victim in the case.",
@@ -116,6 +118,7 @@ export const people: Person[] = [
     kind: "passenger",
     role: "Scientist",
     status: "Victim 01",
+    image: "/images/NewspaperMay2028.png",
     teaser: "A scientist missing for six months. Now in 22F.",
     description:
       "Daniel Rook is a scientist connected to sensitive military-related research. His exact field remains undecided. He officially disappeared about six months ago after a canceled flight, either immediately or three days later. Now his name is tied to seat 22F and the first victim in this case.",
@@ -238,12 +241,24 @@ export const stories: Story[] = [
 export const videos = [
   {
     number: "01",
+    title: "The Last Flight: Characters",
+    subtitle: "Introducing 7 characters.",
+    youtubeId: "TLPTKXJheN4",
+  },
+  {
+    number: "02",
+    title: "The Last Flight: Who Was Meant to Go",
+    subtitle: "Introducing 7 characters",
+    youtubeId: "hXHLj99fPqU",
+  },
+  {
+    number: "03",
     title: "Inside United Premium Plus on the 787-9",
     subtitle: "A look at the cabin where most of the story takes place.",
     youtubeId: "Uy59Q7MDKt8",
   },
   {
-    number: "02",
+    number: "04",
     title: "Business class vs. Premium Plus",
     subtitle: "A closer look at the two cabins in this case file.",
     youtubeId: "22PuI_jHD3o",
