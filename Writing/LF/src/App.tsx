@@ -384,7 +384,8 @@ export default function App() {
     <div className="site-shell">
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-visual" aria-hidden="true">
-          <img src="/images/night-flight-cabin.jpg" alt="" />
+          <img src={`${import.meta.env.BASE_URL}images/night-flight-cabin.jpg`} alt="" /> 
+
         </div>
         <div className="hero-shade" aria-hidden="true" />
 
@@ -400,7 +401,7 @@ export default function App() {
                 <path d="M16 1V31M1 16H31M5.4 5.4L26.6 26.6M26.6 5.4L5.4 26.6" stroke="currentColor" strokeWidth="1.2" />
                 <circle cx="16" cy="16" r="3.1" fill="currentColor" />
               </svg>
-              <span>THE NIGHT FLIGHT</span>
+              <span>THE LAST FLIGHT</span>
             </a>
 
             <nav className="desktop-nav" aria-label="Main navigation">
@@ -457,7 +458,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0.01 : 1, delay: 0.32, ease: [0.2, 0.7, 0.2, 1] }}
           >
-            The Night<br /><em>Flight.</em>
+            The Last<br /><em>Flight.</em>
           </motion.h1>
           <motion.div
             className="hero-bottom"

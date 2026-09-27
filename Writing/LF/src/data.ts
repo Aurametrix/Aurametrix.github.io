@@ -12,6 +12,9 @@ export type Person = {
   image?: string;
 };
 
+const image = (filename: string) =>
+  `${import.meta.env.BASE_URL}images/${filename}`;
+  
 
 
 export type Story = {
@@ -118,7 +121,7 @@ export const people: Person[] = [
     kind: "passenger",
     role: "Scientist",
     status: "Victim 01",
-    image: "/images/NewspaperMay2028.png",
+    image: image("NewspaperMay2028.png"),
     teaser: "A scientist missing for six months. Now in 22F.",
     description:
       "Daniel Rook is a scientist connected to sensitive military-related research. His exact field remains undecided. He officially disappeared about six months ago after a canceled flight, either immediately or three days later. Now his name is tied to seat 22F and the first victim in this case.",
