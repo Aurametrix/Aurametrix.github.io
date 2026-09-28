@@ -125,6 +125,10 @@ img { display: block; max-width: 100%; }
 .timeline-event h3 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-size: clamp(32px, 3.2vw, 46px); font-weight: 400; letter-spacing: -.025em; line-height: 1.08; }
 .event-text { max-width: 560px; margin: 13px 0 0; color: #69746c; font-size: 15px; line-height: 1.7; }
 
+.business-seat {
+  transform: translateX(24px);
+}
+
 .cabin-section {
   color: #eeeee3;
   background: radial-gradient(circle at 80% 52%, rgba(51, 73, 64, .32), transparent 42%), #14211f;

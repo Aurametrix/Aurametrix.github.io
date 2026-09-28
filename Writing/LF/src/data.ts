@@ -29,7 +29,7 @@ export const people: Person[] = [
   {
     id: "harold-vale",
     name: "Harold Adrian Vale",
-    seat: "17A",
+    seat: "13K",
     kind: "passenger",
     role: "Venture capitalist",
     teaser: "A tech investor questioning the Dulles disruption.",
@@ -40,7 +40,7 @@ export const people: Person[] = [
   {
     id: "yosef-katz",
     name: "Yosef Katz",
-    seat: "20D",
+    seat: "16D",
     kind: "passenger",
     role: "Former special-forces operative",
     teaser: "A former special-forces operative on a private mission.",
@@ -51,7 +51,7 @@ export const people: Person[] = [
   {
     id: "d-randolph",
     name: 'John Paul Winston George Montgomery Randolph "D"',
-    seat: "20J",
+    seat: "16J",
     kind: "passenger",
     role: "Drifter",
     teaser: "A drifter, a portfolio tube, and an unseen assignment.",
@@ -62,7 +62,7 @@ export const people: Person[] = [
   {
     id: "astrid-bielke",
     name: "Astrid Bielke",
-    seat: "20L",
+    seat: "16K",
     kind: "passenger",
     role: "Performance consultant",
     teaser: "An ex-Olympian weighing a life-changing proposal.",
@@ -73,7 +73,7 @@ export const people: Person[] = [
   {
     id: "eileen-michaels",
     name: "Eileen Michaels",
-    seat: "21D",
+    seat: "17D",
     kind: "passenger",
     role: "Investigative journalist",
     teaser: "A reporter following contamination and corruption.",
@@ -84,7 +84,7 @@ export const people: Person[] = [
   {
     id: "omar-faizan",
     name: "Omar Faizan",
-    seat: "21J",
+    seat: "17J",
     kind: "passenger",
     role: "Traveler",
     teaser: "Traveling under another name to reach his family.",
@@ -95,7 +95,7 @@ export const people: Person[] = [
   {
     id: "nigel-leatherman",
     name: "Nigel Leatherman",
-    seat: "22D",
+    seat: "18D",
     kind: "passenger",
     role: "MI6 operative",
     teaser: "An MI6 operative looking for a way out.",
@@ -106,7 +106,7 @@ export const people: Person[] = [
   {
     id: "tessa-marlow",
     name: "Tessa Marlow",
-    seat: "22E",
+    seat: "18E",
     kind: "passenger",
     role: "Aerospace systems engineer",
     teaser: "An engineer with a history with Daniel Rook.",
@@ -117,7 +117,7 @@ export const people: Person[] = [
   {
     id: "daniel-rook",
     name: "Daniel Rook",
-    seat: "22F",
+    seat: "18F",
     kind: "passenger",
     role: "Scientist",
     status: "Victim 01",
@@ -130,7 +130,7 @@ export const people: Person[] = [
   {
     id: "melissa-bloom",
     name: "Melissa Bloom",
-    seat: "23F",
+    seat: "18F",
     kind: "passenger",
     role: "Foundation program officer",
     teaser: "A program officer who knows too much about mobility research.",
@@ -141,7 +141,7 @@ export const people: Person[] = [
   {
     id: "amara-mensah",
     name: "Amara Mensah",
-    seat: "24L",
+    seat: "20K",
     kind: "passenger",
     role: "Physician",
     teaser: "A physician carrying a question about altered records.",
@@ -235,7 +235,7 @@ export const stories: Story[] = [
     paragraphs: [
       "Six months could be made to look like an ending. A canceled flight. A name gone from an inbox. A colleague spoken of in the past tense.",
       "Tessa had worked beside Daniel Rook long enough to know that absence did not suit him. He was a scientist who left questions unfinished, even when everyone else had gone home.",
-      "Now she was in 22E, beside the seat assigned to him. 22F. She repeated the number silently, as if it might become an explanation.",
+      "Now she was in 18E, beside the seat assigned to him. 18F. She repeated the number silently, as if it might become an explanation.",
       "It did not. The aircraft kept moving forward.",
     ],
   },
@@ -256,14 +256,14 @@ export const videos = [
   },
   {
     number: "03",
-    title: "Inside United Premium Plus on the 787-9",
+    title: "Inside World Traveller Plus on the 787-9",
     subtitle: "A look at the cabin where most of the story takes place.",
-    youtubeId: "Uy59Q7MDKt8",
+    youtubeId: "n9Rr4M1zRLA",
   },
   {
     number: "04",
-    title: "Business class vs. Premium Plus",
-    subtitle: "A closer look at the two cabins in this case file.",
-    youtubeId: "22PuI_jHD3o",
+    title: "Welcome to the Boeing 787 Dreamliner",
+    subtitle: "A guided tour of Boeing 787 Dreamliner..",
+    youtubeId: "gPi4R3aFeEc",
   },
 ];

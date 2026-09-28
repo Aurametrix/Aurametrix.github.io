@@ -21,8 +21,8 @@ const sectionLinks = [
   { label: "Watch", href: "#watch" },
 ];
 
-const seatColumns = ["A", "C", null, "D", "E", "F", null, "J", "L"] as const;
-const seatRows = [20, 21, 22, 23, 24];
+const seatColumns = ["A", "C", null, "D", "E", "F", null, "J", "K"] as const;
+const seatRows = [16, 17, 18, 19, 20];
 const peopleBySeat = new Map(people.filter((person) => person.seat).map((person) => [person.seat, person]));
 const peopleById = new Map(people.map((person) => [person.id, person]));
 
@@ -89,6 +89,7 @@ function Seat({
   );
 }
 
+
 function SeatMap({
   selectedSeat,
   onSelect,
@@ -103,19 +104,19 @@ function SeatMap({
 
   return (
     <div className="cabin-content">
-      <div className="seat-diagram" aria-label="Cabin seat diagram showing seat 17A and Premium Plus rows 20 through 24">
+      <div className="seat-diagram" aria-label="Cabin seat diagram showing seat 13K adjacent to Premium Plus rows 20 through 24">
         <div className="map-direction">
           <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" />
           <span>FRONT OF AIRCRAFT</span>
         </div>
 
         <div className="map-class-label">
-          <span>POLARIS BUSINESS</span>
+          <span>BUSINESS</span>
           <span>ONE SEAT IN VIEW</span>
         </div>
         <div className="seat-grid-row business-row">
-          <span className="row-number">17</span>
-          <Seat seat="17A" letter="A" selected={selectedSeat === "17A"} onSelect={onSelect} />
+          <span className="row-number">13</span>
+          <Seat seat="13K" letter="K" selected={selectedSeat === "13K"} onSelect={onSelect} />
           <span className="business-row-note">A quiet space ahead of the main cabin</span>
         </div>
 
@@ -158,7 +159,7 @@ function SeatMap({
       <div className="seat-detail" aria-live="polite">
         <div className="seat-detail-top">
           <span className="detail-label">SELECTED SEAT</span>
-          <span className="detail-cabin">{selectedSeat === "17A" ? "POLARIS BUSINESS" : "PREMIUM PLUS"}</span>
+          <span className="detail-cabin">{selectedSeat === "113K" ? "BUSINESS" : "PREMIUM PLUS"}</span>
         </div>
         <AnimatePresence mode="wait">
           <motion.div
@@ -276,7 +277,7 @@ function StoryFile({ story, onProfileLink }: { story: Story; onProfileLink: () =
 }
 
 export default function App() {
-  const [selectedSeat, setSelectedSeat] = useState("22F");
+  const [selectedSeat, setSelectedSeat] = useState("18F");
   const [manifestFilter, setManifestFilter] = useState<ManifestFilter>("all");
   const [query, setQuery] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -396,7 +397,7 @@ export default function App() {
           transition={{ duration: reduceMotion ? 0.01 : 0.8 }}
         >
           <div className="header-inner page-container">
-            <a className="header-brand" href="#top" aria-label="The Night Flight, back to top" onClick={() => setMenuOpen(false)}>
+            <a className="header-brand" href="#top" aria-label="The Last Flight, back to top" onClick={() => setMenuOpen(false)}>
               <svg className="brand-star" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                 <path d="M16 1V31M1 16H31M5.4 5.4L26.6 26.6M26.6 5.4L5.4 26.6" stroke="currentColor" strokeWidth="1.2" />
                 <circle cx="16" cy="16" r="3.1" fill="currentColor" />
@@ -520,7 +521,7 @@ export default function App() {
                 <p>
                   In the aisles: <a href="#profile-dorothy-jones" onClick={() => { returnHashRef.current = "#seat-map"; }}>Dorothy Jones</a> serves D-F;
                   {" "}<a href="#profile-candy-lebowitz" onClick={() => { returnHashRef.current = "#seat-map"; }}>Candy Lebowitz</a> serves J-L.
-                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 17A.
+                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 13K.
                 </p>
                 <a href="https://www.united.com/en/us/fly/company/aircraft/boeing-787-9-dreamliner.html#version-2" target="_blank" rel="noopener noreferrer">
                   Cabin layout reference <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" />
@@ -679,7 +680,7 @@ export default function App() {
             <a className="text-arrow-link" href="#manifest">Return to the manifest <ArrowUpRight size={20} strokeWidth={1.5} aria-hidden="true" /></a>
           </div>
           <div className="footer-bottom">
-            <a href="#top" className="footer-brand">THE NIGHT FLIGHT</a>
+            <a href="#top" className="footer-brand">THE LAST FLIGHT</a>
             <p>A collaborative murder mystery. All characters and events are fictional.</p>
             <a href="#top">Back to top <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" /></a>
           </div>
@@ -708,7 +709,7 @@ export default function App() {
               transition={{ duration: reduceMotion ? 0.01 : 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="file-panel-top">
-                <span>THE NIGHT FLIGHT / CASE FILE</span>
+                <span>THE LAST FLIGHT / CASE FILE</span>
                 <button type="button" ref={closeButtonRef} onClick={closeOverlay} aria-label="Close file">
                   <X size={23} strokeWidth={1.5} aria-hidden="true" />
                 </button>
