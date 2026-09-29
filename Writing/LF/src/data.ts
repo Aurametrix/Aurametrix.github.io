@@ -122,15 +122,15 @@ export const people: Person[] = [
     role: "Scientist",
     status: "Victim 01",
     image: image("NewspaperMay2028.png"),
-    teaser: "A scientist missing for six months. Now in 22F.",
+    teaser: "A scientist missing for six months. Now in 18F.",
     description:
-      "Daniel Rook is a scientist connected to sensitive military-related research. His exact field remains undecided. He officially disappeared about six months ago after a canceled flight, either immediately or three days later. Now his name is tied to seat 22F and the first victim in this case.",
+      "Daniel Rook is a scientist connected to sensitive military-related research. His exact field remains undecided. He officially disappeared about six months ago after a canceled flight, either immediately or three days later. Now his name is tied to seat 18F and the first victim in this case.",
     question: "What happened in the missing interval, and why has he resurfaced?",
   },
   {
     id: "melissa-bloom",
     name: "Melissa Bloom",
-    seat: "18F",
+    seat: "19F",
     kind: "passenger",
     role: "Foundation program officer",
     teaser: "A program officer who knows too much about mobility research.",
@@ -197,8 +197,8 @@ export const timeline = [
   {
     number: "04",
     when: "The case now",
-    title: "Two victims. No settled account.",
-    text: "Daniel Rook and Omar Faizan are the two victims. The sequence of events, the motive, and the ties between the passengers remain to be uncovered.",
+    title: "One victim. No settled account.",
+    text: "    Daniel Rook is the victim. The sequence of events, the motive, and the connections between the passengers remain to be uncovered.",
   },
 ];
 
@@ -251,7 +251,7 @@ export const videos = [
   {
     number: "02",
     title: "The Last Flight: Who Was Meant to Go",
-    subtitle: "Introducing 7 characters",
+    subtitle: "Intro Song",
     youtubeId: "hXHLj99fPqU",
   },
   {

@@ -114,11 +114,14 @@ function SeatMap({
           <span>BUSINESS</span>
           <span>ONE SEAT IN VIEW</span>
         </div>
+
+
         <div className="seat-grid-row business-row">
-          <span className="row-number">13</span>
-          <Seat seat="13K" letter="K" selected={selectedSeat === "13K"} onSelect={onSelect} />
-          <span className="business-row-note">A quiet space ahead of the main cabin</span>
-        </div>
+           <span className="row-number">13</span>
+  	   <span className="business-row-note">A discreet seat bordering the World Traveler Plus cabin</span>
+  	   <Seat seat="13K" letter="K" selected={selectedSeat === "13K"} onSelect={onSelect} />
+	</div>
+
 
         <div className="map-class-label premium-label">
           <span>PREMIUM PLUS</span>
@@ -159,7 +162,7 @@ function SeatMap({
       <div className="seat-detail" aria-live="polite">
         <div className="seat-detail-top">
           <span className="detail-label">SELECTED SEAT</span>
-          <span className="detail-cabin">{selectedSeat === "113K" ? "BUSINESS" : "PREMIUM PLUS"}</span>
+          <span className="detail-cabin">{selectedSeat === "13K" ? "BUSINESS" : "PREMIUM PLUS"}</span>
         </div>
         <AnimatePresence mode="wait">
           <motion.div
@@ -277,6 +280,9 @@ function StoryFile({ story, onProfileLink }: { story: Story; onProfileLink: () =
 }
 
 export default function App() {
+
+  console.log("BUILD TEST 12345 — THIS IS MY APP.TSX");
+  
   const [selectedSeat, setSelectedSeat] = useState("18F");
   const [manifestFilter, setManifestFilter] = useState<ManifestFilter>("all");
   const [query, setQuery] = useState("");
@@ -307,8 +313,10 @@ export default function App() {
           .toLowerCase()
           .includes(search);
       return matchesFilter && matchesSearch;
+      
     });
   }, [manifestFilter, query]);
+
 
   useEffect(() => {
     const syncFromHash = () => {
@@ -467,7 +475,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0.01 : 0.8, delay: 0.55 }}
           >
-            <p>Two victims. One cabin. A story told from every seat.</p>
+            <p>One victim. One cabin. A story told from every seat.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#timeline">Enter the case <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" /></a>
               <a className="hero-text-link" href="#seat-map">Explore the seat map <ArrowDown size={17} strokeWidth={1.6} aria-hidden="true" /></a>
@@ -521,7 +529,7 @@ export default function App() {
                 <p>
                   In the aisles: <a href="#profile-dorothy-jones" onClick={() => { returnHashRef.current = "#seat-map"; }}>Dorothy Jones</a> serves D-F;
                   {" "}<a href="#profile-candy-lebowitz" onClick={() => { returnHashRef.current = "#seat-map"; }}>Candy Lebowitz</a> serves J-L.
-                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 13K.
+                  {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 13K, next to row 16.
                 </p>
                 <a href="https://www.united.com/en/us/fly/company/aircraft/boeing-787-9-dreamliner.html#version-2" target="_blank" rel="noopener noreferrer">
                   Cabin layout reference <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" />
