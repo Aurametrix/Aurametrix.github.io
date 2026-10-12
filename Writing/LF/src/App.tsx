@@ -21,6 +21,9 @@ const sectionLinks = [
   { label: "Watch", href: "#watch" },
 ];
 
+const storyUrl = (filename: string) =>
+  `${import.meta.env.BASE_URL}stories/${filename}`;
+  
 const seatColumns = ["A", "C", null, "D", "E", "F", null, "J", "K"] as const;
 const seatRows = [16, 17, 18, 19, 20];
 const peopleBySeat = new Map(people.filter((person) => person.seat).map((person) => [person.seat, person]));
@@ -493,18 +496,45 @@ export default function App() {
               <p>An unfinished record of what is known, and what still needs answering.</p>
             </Reveal>
             <div className="timeline-list">
-              {timeline.map((event, index) => (
-                <Reveal key={event.number} delay={index * 0.08}>
-                  <article className="timeline-event">
-                    <span className="event-number">{event.number}</span>
-                    <div>
-                      <p className="event-when">{event.when}</p>
-                      <h3>{event.title}</h3>
-                      <p className="event-text">{event.text}</p>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
+              {timeline.map((event, index) => {
+                // Some timeline entries have supporting stories; others do not.
+                // Keep these optional fields here so entries without links remain valid.
+                const linkedEvent = event as typeof event & {
+                  linkLabel?: string;
+                  linkHref?: string;
+                  external?: boolean;
+                  linkPending?: boolean;
+                };
+
+                return (
+                  <Reveal key={event.number} delay={index * 0.08}>
+                    <article className="timeline-event">
+                      <span className="event-number">{event.number}</span>
+                      <div>
+                        <p className="event-when">{event.when}</p>
+                        <h3>{event.title}</h3>
+                        <p className="event-text">{event.text}</p>
+                        {linkedEvent.linkLabel && linkedEvent.linkHref && (
+                          <a
+                            className="text-arrow-link timeline-link"
+                            href={linkedEvent.linkHref}
+                            target={linkedEvent.external ? "_blank" : undefined}
+                            rel={linkedEvent.external ? "noopener noreferrer" : undefined}
+                          >
+                            {linkedEvent.linkLabel}
+                            <ArrowUpRight size={17} strokeWidth={1.5} aria-hidden="true" />
+                          </a>
+                        )}
+                        {linkedEvent.linkLabel && linkedEvent.linkPending && !linkedEvent.linkHref && (
+                          <p className="timeline-link-pending">
+                            {linkedEvent.linkLabel} <span>(story coming soon)</span>
+                          </p>
+                        )}
+                      </div>
+                    </article>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -531,7 +561,7 @@ export default function App() {
                   {" "}<a href="#profile-candy-lebowitz" onClick={() => { returnHashRef.current = "#seat-map"; }}>Candy Lebowitz</a> serves J-L.
                   {" "}<a href="#profile-harold-vale" onClick={() => { returnHashRef.current = "#seat-map"; }}>Harold Vale</a> sits farther forward in 13K, next to row 16.
                 </p>
-                <a href="https://www.united.com/en/us/fly/company/aircraft/boeing-787-9-dreamliner.html#version-2" target="_blank" rel="noopener noreferrer">
+                <a href="https://seatmaps.com/airlines/ba-british-airways/boeing-787-9/" target="_blank" rel="noopener noreferrer">
                   Cabin layout reference <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" />
                 </a>
               </div>
