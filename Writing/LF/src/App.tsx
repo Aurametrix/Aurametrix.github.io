@@ -679,7 +679,7 @@ export default function App() {
                 <Kicker number="05">WATCH</Kicker>
                 <h2 id="watch-title">Inside the <em>aircraft.</em></h2>
               </div>
-              <p>Two YouTube cabin references for the setting. In-story footage can join the file as it grows.</p>
+              <p>YouTube videos and references for the setting. In-story footage will join the file as it grows.</p>
             </Reveal>
             <div className="video-grid">
               {videos.map((video, index) => (

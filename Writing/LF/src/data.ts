@@ -188,7 +188,7 @@ export const timeline = [
     title: "D goes to Amsterdam",
     text: 'D receives an assignment that will eventually bring him aboard Flight 487. He carries out instructions without fully understanding their purpose.',
     linkLabel: "Read D's backstory",
-    linkHref: `${import.meta.env.BASE_URL}stories/D-Goes-to-Amsterdam.pdf`,
+    linkHref: `${import.meta.env.BASE_URL}stories/D-goes-to-amsterdam.pdf`,
     linkPending: false,
   },
   {
@@ -242,6 +242,40 @@ export const timeline = [
 ];
 
 export const stories: Story[] = [
+{
+  id: "d-goes-to-amsterdam",
+  title: "D Goes to Amsterdam",
+  personId: "d-randolph",
+  excerpt: "D had never felt he belonged in his family. Now, at last, he had a mission.",
+  paragraphs: [
+    "John Paul Winston George Montgomery Randolph has never fit the mold of his accomplished family. Known simply as D, he drifts through life in a digital haze, finding purpose and belonging in an online group called Bambi, whose cryptic operations promise something larger than himself.",
+    "When Bambi's mysterious leader, Great Prince, sends him on an unexpected mission to Europe, D eagerly accepts. His assignment seems simple: carry an artist's portfolio tube to Amsterdam. Inside are ordinary posters, but D suspects there may be more to the mission than he understands.",
+    "Waiting to board Flight 487 to London, D imagines himself a foot soldier in a vast, hidden organization. For once, he has a purpose—and perhaps the power to prove that his family has underestimated him. He has no idea what role he is really playing, or what awaits him at the end of the journey."
+  ],
+},
+
+{
+  id: "the-last-flight-the-pattern",
+  title: "The Last Flight: The Pattern",
+  personId: "harold-vale",
+  excerpt: "The weather was real. The cancellations were not. And someone was making sure certain people boarded the same plane.",
+  paragraphs: [
+    "At Washington Dulles International Airport, investor and data analyst Harold Adrian Vale notices something unsettling amid a storm of flight cancellations. As departures disappear from the board, one transatlantic flight remains inexplicably available. To Harold, the chaos looks less like a weather disruption and more like a carefully engineered pattern.",
+    "Armed with proprietary data from his startup, AetherGrid, and a notebook of suspicious names, Harold suspects someone is manipulating the airline system to funnel particular passengers onto Flight 487. But exposing the truth could destroy his company, his reputation, and everything he has built.",
+    "Harold boards the flight with his suspicions still concealed. Hours later, as the aircraft crosses the Atlantic, a flight attendant urgently asks whether a doctor is on board. The carefully assembled pattern may be leading toward something far more dangerous than Harold imagined."
+  ],
+},
+{
+  id: "the-last-flight-the-board",
+  title: "The Last Flight: The Board",
+  personId: "harold-vale",
+  excerpt: "One coincidence was nothing. Two were interesting. Three meant someone was playing chess, and he was the board.",
+  paragraphs: [
+    "As Flight 487 prepares to depart Dulles, Harold Adrian Vale begins studying the passengers being rerouted onto the same transatlantic journey. A disheveled young man carrying a portfolio tube, an Olympic rower and shipping heiress, an investigative journalist, and several other strangers each reveal details that seem ordinary in isolation but increasingly suspicious together.",
+    "Harold recognizes some passengers from his research into anomalies detected by AetherGrid. Others display subtle signs of hidden connections: a lingering glance, a moment of recognition, or an expression that vanishes too quickly. Even the flight attendants seem unusually attentive to certain people aboard.",
+    "With no passenger manifest and only fragments of information, Harold cannot yet explain what connects these strangers. But as the aircraft crosses the dark Atlantic, the coincidences accumulate. He begins to suspect that the passengers are pieces in a carefully arranged game—and that someone else has already decided how it will be played."
+  ],
+},
   {
     id: "weight-in-the-overhead",
     title: "A Weight in the Overhead",
@@ -285,6 +319,12 @@ export const videos = [
     number: "01",
     title: "The Last Flight: Characters",
     subtitle: "Introducing 7 characters.",
+    youtubeId: "O9Sp5GjGqlc",
+  },
+    {
+    number: "01",
+    title: "The Last Flight: Characters",
+    subtitle: "Introducing 7 characters.",
     youtubeId: "TLPTKXJheN4",
   },
   {
@@ -299,6 +339,15 @@ export const videos = [
     subtitle: "A look at the cabin where most of the story takes place.",
     youtubeId: "n9Rr4M1zRLA",
   },
+    {
+    number: "03",
+    title: "Inside World Traveller Plus on the 787-9",
+    subtitle: "On board of 787-9 Dreamliner",
+    youtubeId: "8MTeL7zdZz8",
+  },
+  
+  
+  
   {
     number: "04",
     title: "Welcome to the Boeing 787 Dreamliner",
