@@ -181,6 +181,9 @@ export const timeline = [
     when: "Six months before",
     title: "A scientist vanishes",
     text: "Daniel Rook is officially missing after a canceled flight. Whether he disappeared immediately or three days later is still an open detail.",
+    linkLabel: "Read the newspaper",
+    linkHref: `${import.meta.env.BASE_URL}images/NewspaperMay2028.png`,
+    linkPending: false,
   },
   {
     number: "02",
@@ -212,8 +215,21 @@ export const timeline = [
     title: "The cabin settles",
     text: "The seatbelt sign switches off. Passengers can move around the cabin. Drinks are served, conversations begin, and ordinary movements become potential clues.",
   },
+  
   {
     number: "06",
+    when: "9:34 PM",
+    title: "An MI6 agent lets his guard down",
+    text: "Exhausted after a dangerous assignment, Nigel Leatherman boards Flight 487, unaware that trouble is closer than he thinks.",
+    linkLabel: "Read Nigel's backstory",
+    linkHref: `${import.meta.env.BASE_URL}stories/HabitofWatching.pdf`,
+    external: true,
+  },
+  
+  
+  
+  {
+    number: "07",
     when: "9:47 PM",
     title: "Seven coincidences",
     text: "Harold has counted seven coincidences. What began as suspicion has become a pattern he cannot ignore.",
@@ -222,19 +238,19 @@ export const timeline = [
     external: true,
   },
   {
-    number: "07",
+    number: "08",
     when: "Later that evening",
     title: "The passenger in 18F",
     text: "Daniel Rook is found unresponsive in seat 18F. The flight's ordinary routines suddenly become part of a murder investigation.",
   },
   {
-    number: "08",
+    number: "09",
     when: "After the discovery",
     title: "Everyone remembers differently",
     text: "Passengers and crew recall movements, conversations, and disturbances. Their accounts may overlap, contradict one another, or leave important gaps.",
   },
   {
-    number: "09",
+    number: "10",
     when: "The investigation continues",
     title: "Another disappearance",
     text: "Another passenger's death/disappearance adds another mystery to the developing case. Its relationship to Daniel Rook's death remains to be established.",
@@ -312,6 +328,17 @@ export const stories: Story[] = [
       "It did not. The aircraft kept moving forward.",
     ],
   },
+  {
+  id: "the-habit-of-watching",
+  title: "The Habit of Watching",
+  personId: "nigel-leatherman",
+  excerpt: "Nigel Leatherman had spent twenty years watching for danger. Tonight, all he wanted was sleep.",
+  paragraphs: [
+    "After a grueling MI6 assignment on a Caribbean island torn by a bloody military coup, Nigel Leatherman is finally heading home. Exhausted by twenty years of dangerous operations and increasingly conscious that his luck may be running out, he longs for a quiet vacation, time with family, and a reunion with his mischievous orange kitten, Booger.",
+    "Settling into seat 18D aboard Flight 487, Nigel cannot resist an old professional habit: studying the passengers around him. His practiced scan reveals nothing unusual—just an ordinary collection of travelers brought together by delays and cancellations. Satisfied, he allows himself to relax.",
+    "As the Dreamliner climbs into the night, Nigel falls into a deep, well-earned sleep. He knows no one aboard and has no reason to suspect anything is wrong. But just two seats away, a fellow passenger is beginning a journey from which he will never return."
+  ],
+},
 ];
 
 export const videos = [
