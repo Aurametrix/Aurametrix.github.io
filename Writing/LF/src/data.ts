@@ -65,10 +65,10 @@ export const people: Person[] = [
     seat: "16K",
     kind: "passenger",
     role: "Performance consultant",
-    teaser: "An ex-Olympian weighing a life-changing proposal.",
+    teaser: "An ex-Olympian concealing a warning from the man found dead in 18F.",
     description:
-      "Astrid Bielke, 28, is a Swedish former Olympic rower turned performance consultant. Aristocratic and intensely disciplined, she is privately conflicted over a marriage proposal.",
-    question: "What would choosing a different future cost her?",
+      "Astrid Bielke, 28, is a Swedish former Olympic rower turned performance consultant. After scientist Daniel Rook warned her about her politician boyfriend and his corporate supporters, she accepted his engagement ring but withheld her answer. On Flight 487, she recognizes Rook traveling under the name David Rowe and conceals their prior meeting.",
+    question: "Why was Rook aboard her flight, and how much does Astrid dare reveal about him?",
   },
   {
     id: "eileen-michaels",
@@ -76,10 +76,10 @@ export const people: Person[] = [
     seat: "17D",
     kind: "passenger",
     role: "Investigative journalist",
-    teaser: "A reporter following contamination and corruption.",
+    teaser: "A journalist with a personal history with Rook—and a recent secret message from him.",
     description:
-      "Eileen Michaels is an investigative journalist focused on environmental contamination, corporate cost cutting, and government regulatory corruption. She has built her work around the things powerful people would rather leave buried.",
-    question: "Which of her investigations might intersect with this flight?",
+      "Eileen Michaels is an investigative journalist covering environmental contamination and corruption. She interviewed MIT professor Daniel Rook in 2020 about the environmental consequences of AI, then had a brief affair with him. Days before Flight 487, Rook contacted her through SecureDrop to request a confidential meeting about sensitive information; she could not meet before leaving for London.",
+    question: "What did Rook want to tell Eileen, and did he contact her trusted colleague?",
   },
   {
     id: "omar-faizan",
@@ -178,6 +178,12 @@ export const people: Person[] = [
 export const timeline = [
   {
     number: "01",
+    when: "2020",
+    title: "Eileen interviews Daniel Rook",
+    text: "After attending his MIT lectures, journalist Eileen Michaels interviews atmospheric physicist Daniel Rook about AI’s growing energy demands and environmental impact. Her article attracts little public attention, yet veiled threats follow. Eileen and Daniel later become lovers, but the affair is brief, and they eventually part on amicable terms.",
+  },
+  {
+    number: "02",
     when: "Six months before",
     title: "A scientist vanishes",
     text: "Daniel Rook is officially missing after a canceled flight. Whether he disappeared immediately or three days later is still an open detail.",
@@ -186,7 +192,7 @@ export const timeline = [
     linkPending: false,
   },
   {
-    number: "02",
+    number: "03",
     when: "One month before",
     title: "D goes to Amsterdam",
     text: 'D receives an assignment that will eventually bring him aboard Flight 487. He carries out instructions without fully understanding their purpose.',
@@ -195,7 +201,25 @@ export const timeline = [
     linkPending: false,
   },
   {
-    number: "03",
+    number: "04",
+    when: "Several weeks before",
+    title: "A private warning for Astrid",
+    text: "Daniel Rook approaches Astrid Bielke with allegations about her politician boyfriend's ties to a multinational corporation. After one private meeting, he warns her not to marry before learning the truth.",
+  },
+  {
+    number: "05",
+    when: "Weeks before departure",
+    title: "A ring, but no answer",
+    text: "Astrid's boyfriend proposes unexpectedly. She accepts the diamond ring but not the proposal, then arranges a trip to England to consider Rook's warning and her future.",
+  },
+  {
+    number: "06",
+    when: "Several days before departure",
+    title: "A message through SecureDrop",
+    text: "Daniel Rook contacts Eileen Michaels, saying he has sensitive information and asking to meet safely in person. Unable to meet before her London trip, Eileen asks him to wait or contact a trusted colleague.",
+  },
+  {
+    number: "07",
     when: "At Dulles",
     title: "A disruption draws attention",
     text: "Harold Vale suspects the disruption may have been engineered. The reason, and any connection to this group of travelers, is not yet known.",
@@ -204,20 +228,26 @@ export const timeline = [
     external: true,
   },
   {
-    number: "04",
+    number: "08",
+    when: "During boarding",
+    title: "Astrid recognizes David Rowe",
+    text: "Astrid sees the man she knows as Dr. Daniel Rook traveling under the name David Rowe. Their eyes meet briefly, but neither acknowledges the other; she keeps their connection secret.",
+  },
+  {
+    number: "09",
     when: "9:00 PM",
     title: "The only flight left",
     text: "After severe weather disrupts departures from Dulles, Flight 487 departs for Heathrow. Other transatlantic flights have been canceled, and the aircraft is full.",
   },
   {
-    number: "05",
+    number: "10",
     when: "9:30 PM",
     title: "The cabin settles",
     text: "The seatbelt sign switches off. Passengers can move around the cabin. Drinks are served, conversations begin, and ordinary movements become potential clues.",
   },
   
   {
-    number: "06",
+    number: "11",
     when: "9:34 PM",
     title: "An MI6 agent lets his guard down",
     text: "Exhausted after a dangerous assignment, Nigel Leatherman boards Flight 487, unaware that trouble is closer than he thinks.",
@@ -229,7 +259,7 @@ export const timeline = [
   
   
   {
-    number: "07",
+    number: "12",
     when: "9:47 PM",
     title: "Seven coincidences",
     text: "Harold has counted seven coincidences. What began as suspicion has become a pattern he cannot ignore.",
@@ -238,19 +268,25 @@ export const timeline = [
     external: true,
   },
   {
-    number: "08",
+    number: "13",
     when: "Later that evening",
     title: "The passenger in 18F",
     text: "Daniel Rook is found unresponsive in seat 18F. The flight's ordinary routines suddenly become part of a murder investigation.",
   },
   {
-    number: "09",
+    number: "14",
+    when: "After Rook is found",
+    title: "Astrid denies knowing the victim",
+    text: "Astrid knows the dead man's real name and the threats he described against her boyfriend's political and corporate relationships. Asked if she knew him, she says no, fearing what admitting their secret meeting might imply.",
+  },
+  {
+    number: "15",
     when: "After the discovery",
     title: "Everyone remembers differently",
     text: "Passengers and crew recall movements, conversations, and disturbances. Their accounts may overlap, contradict one another, or leave important gaps.",
   },
   {
-    number: "10",
+    number: "16",
     when: "The investigation continues",
     title: "Another disappearance",
     text: "Another passenger's death/disappearance adds another mystery to the developing case. Its relationship to Daniel Rook's death remains to be established.",
@@ -258,6 +294,29 @@ export const timeline = [
 ];
 
 export const stories: Story[] = [
+  {
+    id: "astrid-the-warning",
+    title: "Astrid's Story: The Warning",
+    personId: "astrid-bielke",
+    excerpt: "She recognized the dead man under another name—and denied ever knowing him.",
+    paragraphs: [
+      "Several weeks before Flight 487, Dr. Daniel Rook privately contacted Astrid Bielke with a warning about her politician boyfriend. Rook claimed to have information that could ruin the man's career and expose troubling ties to a multinational corporation that funded and supported him. Astrid initially doubted his motives, but he knew enough to persuade her to meet him. Rook alleged that her boyfriend knew about damaging environmental practices and helped protect the corporation's interests. Before leaving, he told her: 'Don't marry him until you know who you're marrying.'",
+      "When her boyfriend unexpectedly proposed, Astrid accepted his diamond ring but did not agree to marry him. She arranged a trip to England to put some distance between herself and the question. Boarding Flight 487, she was stunned to recognize Rook traveling as David Rowe. Their eyes briefly met, but neither acknowledged the other.",
+      "After Rook was found dead, Astrid faced a dilemma. She knew who he really was, what he had alleged about her boyfriend, and how suspicious their secret meeting might appear. When asked if she knew the victim, she calmly said no. Yet she could not stop wondering whether Rook had followed her to deliver one final warning—or one final piece of evidence."
+    ],
+  },
+  {
+    id: "eileen-daniel-rook",
+    title: "Eileen's Story: The Scientist and the Journalist",
+    personId: "eileen-michaels",
+    excerpt: "A 2020 interview became a brief affair. Days before Flight 487, Daniel contacted her again with a secret.",
+    paragraphs: [
+      "Long before he developed Waymark, Daniel Rook was renowned for researching environmental contamination and remediation. Educated in environmental engineering at Stanford University and later a tenured MIT professor, he lectured internationally; among his best-known subjects was toxic dust exposure at Ground Zero in 2001. Investigative journalist Eileen Michaels saw him speak at several MIT seminars on contamination and health risks. After repeated refusals, she finally secured an interview in 2020.",
+      "Rook surprised Eileen with his charisma and attractiveness, but she also found his ego inflated by his reputation. The interview ran long, and he invited her to dinner to continue talking. He flirted openly; she repeatedly reminded him that she was there as a journalist. Her interview article, published weeks later, featured his warning about the energy consumption, carbon footprint, and possible environmental consequences of artificial intelligence. Public response was muted, but Eileen received veiled threats against her life.",
+      "They met again after publication. Daniel was unsurprised by the public indifference but worried about the threats; Eileen told him such dangers were part of her work and that previous threats had never been carried out. Their mutual attraction became a brief affair, despite a twenty-two-year age gap and lives dominated by their careers. Daniel became involved with the startup Waymark, while Eileen continued to work long hours and travel worldwide. They parted by agreement and were thereafter distant but polite when they crossed paths in public.",
+      "Several days before Eileen's trip to London, Daniel unexpectedly contacted her through SecureDrop, her news organization's secure anonymous whistleblower system. He said he had sensitive information and wanted to meet in person somewhere safe. Eileen could not leave work before her trip. She asked whether it could wait until her return and, if not, offered the name of a trusted colleague. She did not know what Daniel meant to reveal."
+    ],
+  },
 {
   id: "d-goes-to-amsterdam",
   title: "D Goes to Amsterdam",
@@ -344,30 +403,30 @@ export const stories: Story[] = [
 export const videos = [
   {
     number: "01",
-    title: "The Last Flight: Characters",
-    subtitle: "Introducing 7 characters.",
+    title: "The Last Flight: The Seat Map",
+    subtitle: "Introducing 13 characters.",
     youtubeId: "O9Sp5GjGqlc",
   },
     {
-    number: "01",
+    number: "02",
     title: "The Last Flight: Characters",
     subtitle: "Introducing 7 characters.",
     youtubeId: "TLPTKXJheN4",
   },
   {
-    number: "02",
+    number: "03",
     title: "The Last Flight: Who Was Meant to Go",
     subtitle: "Intro Song",
     youtubeId: "hXHLj99fPqU",
   },
   {
-    number: "03",
+    number: "04",
     title: "Inside World Traveller Plus on the 787-9",
     subtitle: "A look at the cabin where most of the story takes place.",
     youtubeId: "n9Rr4M1zRLA",
   },
     {
-    number: "03",
+    number: "05",
     title: "Inside World Traveller Plus on the 787-9",
     subtitle: "On board of 787-9 Dreamliner",
     youtubeId: "8MTeL7zdZz8",
@@ -376,7 +435,7 @@ export const videos = [
   
   
   {
-    number: "04",
+    number: "06",
     title: "Welcome to the Boeing 787 Dreamliner",
     subtitle: "A guided tour of Boeing 787 Dreamliner..",
     youtubeId: "gPi4R3aFeEc",
